@@ -1,7 +1,7 @@
 // import g from "./utils-js/helpers/global";
 // import { defineRoutes } from "./app/routes";
 // import Route from "./utils-js/routing/Route";
-// import Echo from "laravel-echo";
+import Echo from "laravel-echo";
 // import Notify from "./utils-js/notifications/Notify";
 
 declare global {
