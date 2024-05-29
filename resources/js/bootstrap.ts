@@ -43,7 +43,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';*/
 // import * as bootstrap from 'bootstrap';
 
 // Added: Popper.js dependency for popover support in Bootstrap
-import '@popperjs/core';
+// import '@popperjs/core';
 
 // Enable tooltips
 // g.startTooltips()

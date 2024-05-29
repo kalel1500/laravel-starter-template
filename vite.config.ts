@@ -14,7 +14,7 @@ export default ({ mode }: { mode: Mode }) => {
     return defineConfig({
         plugins: [
             laravel({
-                input: ['resources/css/app.scss', 'resources/js/app.ts'],
+                input: ['resources/css/app.css', 'resources/js/app.ts'],
                 refresh: false,
             }),
         ],
