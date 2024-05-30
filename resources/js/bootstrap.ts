@@ -1,6 +1,6 @@
 // import g from "./utils-js/helpers/global";
-// import { defineRoutes } from "./app/routes";
-// import Route from "./utils-js/routing/Route";
+import {defineRoutes} from "./app/routes";
+import {Route} from "laravel-ts-utilities/dist/types/src";
 import Echo from "laravel-echo";
 // import Notify from "./utils-js/notifications/Notify";
 
@@ -15,10 +15,6 @@ declare global {
             readonly VITE_APP_NAME: string
             readonly VITE_APP_ENV: string
         }
-    }
-    interface Window {
-        Pusher: any;
-        // Echo: Echo;
     }
 }
 
@@ -56,5 +52,5 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';*/
 /*----- RUTAS --------------------------------------------------------------------------------------------------------*/
 
 // Definimos y ejecutamos las rutas de JS
-// defineRoutes()
-// Route.dispatch()
+defineRoutes()
+Route.dispatch()
