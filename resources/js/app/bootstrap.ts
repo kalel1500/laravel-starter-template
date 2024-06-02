@@ -1,5 +1,5 @@
 // import g from "./utils-js/helpers/global";
-import {defineRoutes} from "./app/routes";
+import {defineRoutes} from "./routes";
 import {Route} from "laravel-ts-utilities/dist/types/src";
 import Echo from "laravel-echo";
 // import Notify from "./utils-js/notifications/Notify";
