@@ -9,7 +9,8 @@
         "kalel1500/laravel-hexagonal-and-ddd-architecture-utilities": "^1.1",
         "laravel/framework": "^11.9",
         "laravel/reverb": "@beta",
-        "laravel/tinker": "^2.9"
+        "laravel/tinker": "^2.9",
+        "tightenco/ziggy": "^2.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

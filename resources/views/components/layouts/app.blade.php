@@ -12,11 +12,11 @@
 
         <title>{{ $title }}</title>
 
-        {{-- Acceso a las rutas de laravel desde javascipt --}}
-        @routes
-
         <!-- JavaScript y CSS compilados -->
         @vite(['resources/css/app.css', 'resources/js/app.ts'])
+
+        {{-- Acceso a las rutas de laravel desde javascipt --}}
+        @routes
 
         <!-- Icons -->
         <link rel="icon" href="{{ \Illuminate\Support\Facades\Vite::asset('resources/images/favicon.ico') }}">
