@@ -1,4 +1,4 @@
-import {Route} from "laravel-ts-utilities/dist/types/src";
+import {Route} from "laravel-ts-utilities";
 import HomeController from "../src/home/infrastructure/HomeController";
 
 export function defineRoutes(): void {
