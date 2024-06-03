@@ -1,11 +1,10 @@
-import {DefaultConfig} from "laravel-ts-utilities";
-import {Config} from "laravel-ts-utilities";
+import {Constants, DefaultConstants} from "laravel-ts-utilities";
 
-interface AppConstants extends DefaultConfig {
+interface AppConstants extends DefaultConstants {
     anotherSetting: string;
 }
 
-const Const = Config.getInstance() as Config<AppConstants>;
+const Const = Constants.getInstance() as Constants<AppConstants>;
 Const.extend({
     appIcon: new URL('/resources/images/logo-pi.png', import.meta.url).href,
     VITE_BROADCASTING_ENABLED: import.meta.env.VITE_BROADCASTING_ENABLED === 'true',
