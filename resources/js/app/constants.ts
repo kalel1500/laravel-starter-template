@@ -6,7 +6,7 @@ interface AppConstants extends DefaultConstants {
 
 const Const = Constants.getInstance() as Constants<AppConstants>;
 Const.extend({
-    appIcon: new URL('/resources/images/logo-pi.png', import.meta.url).href,
+    appIcon: new URL('/resources/images/favicon.ico', import.meta.url).href,
     VITE_BROADCASTING_ENABLED: import.meta.env.VITE_BROADCASTING_ENABLED === 'true',
     VITE_REVERB_APP_KEY: import.meta.env.VITE_REVERB_APP_KEY,
     VITE_REVERB_HOST: import.meta.env.VITE_REVERB_HOST,
