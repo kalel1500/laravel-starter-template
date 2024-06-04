@@ -22,7 +22,7 @@
         "@fortawesome/fontawesome-free": "^6.5.2",
         "@popperjs/core": "^2.11.8",
         "bootstrap": "^5.3.3",
-        "laravel-ts-utilities": "^1.0.0",
+        "laravel-ts-utilities": "^2.0.0",
         "luxon": "^3.4.4",
         "slim-select": "^2.8.2",
         "sweetalert2": "^11.11.0",
