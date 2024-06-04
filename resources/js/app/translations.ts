@@ -13,22 +13,3 @@ translator.registerTranslations('en', en);
 export const __ = (key: keyof AppTranslations, replacements?: Record<string, string>) => {
     return translator.get(key, replacements);
 }
-
-
-/*let EXTERNAL: TranslatorT<AppTranslations> | null = null;
-export function __t(key: keyof AppTranslations, replacements?: Record<string, string>): string
-{
-    if (!EXTERNAL) {
-        EXTERNAL = new TranslatorT<AppTranslations>();
-        EXTERNAL.addTranslations('es', es);
-        EXTERNAL.addTranslations('en', en);
-    }
-    return EXTERNAL.get(key, replacements);
-}*/
-
-
-/*export function registerTranslations(): void {
-    Translator.registerDefaultTranslations();
-    Translator.registerTranslations('es', es);
-    Translator.registerTranslations('en', en);
-}*/
