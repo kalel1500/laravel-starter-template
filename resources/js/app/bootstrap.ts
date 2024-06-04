@@ -2,7 +2,7 @@
 import {defineRoutes} from "./routes";
 import {Route} from "laravel-ts-utilities";
 import Echo from "laravel-echo";
-import {registerTranslations} from "./translations";
+// import {registerTranslations} from "./translations";
 // import Notify from "./utils-js/notifications/Notify";
 
 declare global {
@@ -53,7 +53,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';*/
 /*----- TRADUCCIONES --------------------------------------------------------------------------------------------------------*/
 
 // Definimos y ejecutamos las rutas de JS
-registerTranslations()
+// registerTranslations()
 
 
 /*----- RUTAS --------------------------------------------------------------------------------------------------------*/

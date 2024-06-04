@@ -1,4 +1,4 @@
 {
-    "testQqq": "esto es un test",
-    "anotherField": "eeeeeeei"
+    "test_message": "Mensaje de prueba",
+    "test_message_VARIABLE": "Mensaje de prueba con :variable"
 }
