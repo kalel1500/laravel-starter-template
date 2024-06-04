@@ -1,9 +1,5 @@
-// import g from "./utils-js/helpers/global";
+import {g, Notify, Route} from "laravel-ts-utilities";
 import {defineRoutes} from "./routes";
-import {Route} from "laravel-ts-utilities";
-import Echo from "laravel-echo";
-// import {registerTranslations} from "./translations";
-// import Notify from "./utils-js/notifications/Notify";
 
 declare global {
     interface ImportMeta {
@@ -22,9 +18,9 @@ declare global {
 
 /*----- ERROR GLOBAL -------------------------------------------------------------------------------------------------*/
 
-/*window.onerror = (message, source, lineno, colno, error) => {
+window.onerror = (message, source, lineno, colno, error) => {
     return g.handleGlobalError(error)
-};*/
+};
 
 
 /*----- AXIOS --------------------------------------------------------------------------------------------------------*/
@@ -37,23 +33,17 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';*/
 /*----- BOOTSTARP ----------------------------------------------------------------------------------------------------*/
 
 // Added: Actual Bootstrap JavaScript dependency
-// import * as bootstrap from 'bootstrap';
+import * as bootstrap from 'bootstrap';
 
 // Added: Popper.js dependency for popover support in Bootstrap
-// import '@popperjs/core';
+import '@popperjs/core';
 
 // Enable tooltips
-// g.startTooltips()
+g.startTooltips()
 
 
 /*----- NOTIFICACIONES -----------------------------------------------------------------------------------------------*/
-// Notify.checkAndRequestPermission()
-
-
-/*----- TRADUCCIONES --------------------------------------------------------------------------------------------------------*/
-
-// Definimos y ejecutamos las rutas de JS
-// registerTranslations()
+Notify.checkAndRequestPermission()
 
 
 /*----- RUTAS --------------------------------------------------------------------------------------------------------*/
