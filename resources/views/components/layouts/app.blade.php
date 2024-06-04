@@ -13,7 +13,7 @@
         <title>{{ $title }}</title>
 
         <!-- JavaScript y CSS compilados -->
-        @vite(['resources/css/app.css', 'resources/js/app.ts'])
+        @vite(['resources/css/app.scss', 'resources/js/app.ts'])
 
         {{-- Acceso a las rutas de laravel desde javascipt --}}
         @routes
