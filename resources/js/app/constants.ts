@@ -4,8 +4,8 @@ interface AppConstants extends DefaultConstants {
     anotherSetting: string;
 }
 
-const Const = Constants.getInstance() as Constants<AppConstants>;
-Const.extend({
+const constants = Constants.getInstance<AppConstants>();
+constants.extend({
     appIcon: new URL('/resources/images/favicon.ico', import.meta.url).href,
     VITE_BROADCASTING_ENABLED: import.meta.env.VITE_BROADCASTING_ENABLED === 'true',
     VITE_REVERB_APP_KEY: import.meta.env.VITE_REVERB_APP_KEY,
