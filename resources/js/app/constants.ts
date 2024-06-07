@@ -16,4 +16,5 @@ constants.extend({
     VITE_APP_ENV: import.meta.env.VITE_APP_ENV,
     anotherSetting: 'newCustomValue',
 });
-export const _const = Const.getConstants()
+
+export const _const = <T extends keyof AppConstants>(key: T): AppConstants[T] => constants.get(key)
