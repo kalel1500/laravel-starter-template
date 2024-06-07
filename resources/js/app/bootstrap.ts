@@ -1,6 +1,28 @@
 import {g, Notify, Route} from "laravel-ts-utilities";
 import {defineRoutes} from "./routes";
 
+
+/*----- BOOTSTARP ----------------------------------------------------------------------------------------------------*/
+
+// Added: Actual Bootstrap JavaScript dependency
+import * as bootstrap from 'bootstrap';
+
+// Added: Popper.js dependency for popover support in Bootstrap
+import '@popperjs/core';
+
+// Enable tooltips
+g.startTooltips()
+
+
+/*----- AXIOS --------------------------------------------------------------------------------------------------------*/
+
+/*import axios from 'axios';
+window.axios = axios;
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';*/
+
+
+/*----- ENV VARIABLES ------------------------------------------------------------------------------------------------*/
+
 declare global {
     interface ImportMeta {
         readonly env: {
@@ -27,25 +49,6 @@ window.onerror = (message, source, lineno, colno, error) => {
 
 import './constants'
 import './translations'
-
-
-/*----- AXIOS --------------------------------------------------------------------------------------------------------*/
-
-/*import axios from 'axios';
-window.axios = axios;
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';*/
-
-
-/*----- BOOTSTARP ----------------------------------------------------------------------------------------------------*/
-
-// Added: Actual Bootstrap JavaScript dependency
-import * as bootstrap from 'bootstrap';
-
-// Added: Popper.js dependency for popover support in Bootstrap
-import '@popperjs/core';
-
-// Enable tooltips
-g.startTooltips()
 
 
 /*----- NOTIFICACIONES -----------------------------------------------------------------------------------------------*/
