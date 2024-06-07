@@ -23,6 +23,12 @@ window.onerror = (message, source, lineno, colno, error) => {
 };
 
 
+/*----- INICIALIZAR CONSTANTES Y TRADUCCIONES-------------------------------------------------------------------------*/
+
+import './constants'
+import './translations'
+
+
 /*----- AXIOS --------------------------------------------------------------------------------------------------------*/
 
 /*import axios from 'axios';
