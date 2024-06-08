@@ -21,6 +21,7 @@ export default ({ mode }: { mode: Mode }) => {
         base: base,
         build: {
             minify: envIsNotLocal,
+            sourcemap: envIsLocal,
             target: "es2022",
             rollupOptions: {
                 output: {
