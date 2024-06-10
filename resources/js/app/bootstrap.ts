@@ -11,7 +11,7 @@ import * as bootstrap from 'bootstrap';
 import '@popperjs/core';
 
 // Enable tooltips
-g.startTooltips()
+g.startTooltips();
 
 
 /*----- AXIOS --------------------------------------------------------------------------------------------------------*/
@@ -41,22 +41,22 @@ declare global {
 /*----- ERROR GLOBAL -------------------------------------------------------------------------------------------------*/
 
 window.onerror = (message, source, lineno, colno, error) => {
-    return g.handleGlobalError(error)
+    return g.handleGlobalError(error);
 };
 
 
 /*----- INICIALIZAR CONSTANTES Y TRADUCCIONES (para que se apliquen en el paquete aunque no se utilicen en la app)----*/
 
-import './constants'
-import './translations'
+import './constants';
+import './translations';
 
 
 /*----- NOTIFICACIONES -----------------------------------------------------------------------------------------------*/
-Notify.checkAndRequestPermission()
+Notify.checkAndRequestPermission();
 
 
 /*----- RUTAS --------------------------------------------------------------------------------------------------------*/
 
 // Definimos y ejecutamos las rutas de JS
-defineRoutes()
-Route.dispatch()
+defineRoutes();
+Route.dispatch();

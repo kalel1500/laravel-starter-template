@@ -3,8 +3,8 @@ import en from './lang/en.json';
 import {DefaultTranslations, Translator} from "laravel-ts-utilities";
 
 export interface AppTranslations extends DefaultTranslations {
-    "test_message": string,
-    "test_message_VARIABLE": string
+    "test_message": string;
+    "test_message_VARIABLE": string;
 }
 
 const translator = Translator.getInstance<AppTranslations>();
