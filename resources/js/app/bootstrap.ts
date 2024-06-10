@@ -8,7 +8,7 @@ import {defineRoutes} from "./routes";
 import * as bootstrap from 'bootstrap';
 
 // Added: Popper.js dependency for popover support in Bootstrap
-import '@popperjs/core';
+import "@popperjs/core";
 
 // Enable tooltips
 g.startTooltips();
@@ -33,7 +33,7 @@ declare global {
             readonly VITE_REVERB_SCHEME: string
             readonly VITE_APP_NAME: string
             readonly VITE_APP_ENV: string
-        }
+        };
     }
 }
 
@@ -47,8 +47,8 @@ window.onerror = (message, source, lineno, colno, error) => {
 
 /*----- INICIALIZAR CONSTANTES Y TRADUCCIONES (para que se apliquen en el paquete aunque no se utilicen en la app)----*/
 
-import './constants';
-import './translations';
+import "./constants";
+import "./translations";
 
 
 /*----- NOTIFICACIONES -----------------------------------------------------------------------------------------------*/
