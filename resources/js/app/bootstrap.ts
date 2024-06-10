@@ -45,7 +45,7 @@ window.onerror = (message, source, lineno, colno, error) => {
 };
 
 
-/*----- INICIALIZAR CONSTANTES Y TRADUCCIONES-------------------------------------------------------------------------*/
+/*----- INICIALIZAR CONSTANTES Y TRADUCCIONES (para que se apliquen en el paquete aunque no se utilicen en la app)----*/
 
 import './constants'
 import './translations'
