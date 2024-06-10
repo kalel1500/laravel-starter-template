@@ -4,6 +4,6 @@ export default class HomeController
 {
     index()
     {
-        console.log(_const('VITE_BROADCASTING_ENABLED'))
+        console.log(_const('VITE_BROADCASTING_ENABLED'));
     }
 }

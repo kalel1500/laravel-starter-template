@@ -17,4 +17,4 @@ constants.extend({
     anotherSetting: 'newCustomValue',
 });
 
-export const _const = <T extends keyof AppConstants>(key: T): AppConstants[T] => constants.get(key)
+export const _const = <T extends keyof AppConstants>(key: T): AppConstants[T] => constants.get(key);
