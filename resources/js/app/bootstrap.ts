@@ -1,28 +1,4 @@
-import {g, Notify, Route} from "laravel-ts-utilities";
-import {defineRoutes} from "./routes";
-
-
-/*----- BOOTSTARP ----------------------------------------------------------------------------------------------------*/
-
-// Added: Actual Bootstrap JavaScript dependency
-import * as bootstrap from 'bootstrap';
-
-// Added: Popper.js dependency for popover support in Bootstrap
-import "@popperjs/core";
-
-// Enable tooltips
-g.startTooltips();
-
-
-/*----- AXIOS --------------------------------------------------------------------------------------------------------*/
-
-/*import axios from 'axios';
-window.axios = axios;
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';*/
-
-
-/*----- ENV VARIABLES ------------------------------------------------------------------------------------------------*/
-
+// Declare .env variables
 declare global {
     interface ImportMeta {
         readonly env: {
@@ -37,25 +13,16 @@ declare global {
     }
 }
 
-
-/*----- ERROR GLOBAL -------------------------------------------------------------------------------------------------*/
-
-window.onerror = (message, source, lineno, colno, error) => {
-    return g.handleGlobalError(error);
-};
-
-
-/*----- INICIALIZAR CONSTANTES Y TRADUCCIONES (para que se apliquen en el paquete aunque no se utilicen en la app)----*/
-
+// INICIALIZAR CONSTANTES Y TRADUCCIONES (para que se apliquen en el paquete aunque no se utilicen en la app)
 import "./constants";
 import "./translations";
 
+// Los otros imports (debajo)
+import {Route, UtilitiesServiceProvider} from "laravel-ts-utilities";
+import {defineRoutes} from "./routes";
 
-/*----- NOTIFICACIONES -----------------------------------------------------------------------------------------------*/
-Notify.checkAndRequestPermission();
-
-
-/*----- RUTAS --------------------------------------------------------------------------------------------------------*/
+// Definir que acciones ejecutar del paquete
+UtilitiesServiceProvider.features(["registerGlobalError", "enableTooltips", "enableNotifications"]);
 
 // Definimos y ejecutamos las rutas de JS
 defineRoutes();
