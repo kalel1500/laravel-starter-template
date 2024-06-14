@@ -27,5 +27,9 @@
         "slim-select": "^2.8.2",
         "sweetalert2": "^11.11.0",
         "tabulator-tables": "^6.2.1"
+    },
+    "engines": {
+        "node": "^20.11.1",
+        "npm": "^10.5.0"
     }
 }
