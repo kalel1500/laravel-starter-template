@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "524bf3866639910c8feb2df57ba6de69",
+    "content-hash": "301d22efd4d4505f7c5083c1b58c165b",
     "packages": [
         {
             "name": "brick/math",
@@ -1215,16 +1215,16 @@
         },
         {
             "name": "kalel1500/laravel-hexagonal-and-ddd-architecture-utilities",
-            "version": "v2.0.1",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities.git",
-                "reference": "7bf49d977ef8ba29e182885857959704de2f2c76"
+                "reference": "d26c9ee9d98221e24f3e56d3d89917ff2167c2e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/zipball/7bf49d977ef8ba29e182885857959704de2f2c76",
-                "reference": "7bf49d977ef8ba29e182885857959704de2f2c76",
+                "url": "https://api.github.com/repos/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/zipball/d26c9ee9d98221e24f3e56d3d89917ff2167c2e5",
+                "reference": "d26c9ee9d98221e24f3e56d3d89917ff2167c2e5",
                 "shasum": ""
             },
             "require": {
@@ -1273,9 +1273,9 @@
             ],
             "support": {
                 "issues": "https://github.com/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/issues",
-                "source": "https://github.com/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/tree/v2.0.1"
+                "source": "https://github.com/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/tree/v5.0.0"
             },
-            "time": "2024-06-13T12:31:04+00:00"
+            "time": "2024-07-19T18:43:40+00:00"
         },
         {
             "name": "laravel/framework",

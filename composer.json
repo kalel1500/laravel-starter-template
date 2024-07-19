@@ -6,7 +6,7 @@
     "license": "GPL-3.0-or-later",
     "require": {
         "php": "^8.2",
-        "kalel1500/laravel-hexagonal-and-ddd-architecture-utilities": "^2.0",
+        "kalel1500/laravel-hexagonal-and-ddd-architecture-utilities": "^5.0",
         "laravel/framework": "^11.9",
         "laravel/reverb": "@beta",
         "laravel/tinker": "^2.9",
