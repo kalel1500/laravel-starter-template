@@ -8,9 +8,8 @@
         "php": "^8.2",
         "kalel1500/laravel-hexagonal-and-ddd-architecture-utilities": "@beta",
         "laravel/framework": "^11.9",
-        "laravel/reverb": "^1.3",
         "laravel/tinker": "^2.9",
-        "tightenco/ziggy": "^2.2"
+        "tightenco/ziggy": "^2.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
