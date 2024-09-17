@@ -7,27 +7,10 @@
         "build-check": "tsc && vite build"
     },
     "devDependencies": {
-        "@types/bootstrap": "^5.2.10",
-        "@types/luxon": "^3.4.2",
-        "@types/node": "20.11.1",
-        "@types/tabulator-tables": "^6.2.0",
-        "laravel-vite-plugin": "^1.0.4",
-        "sass": "^1.77.5",
+        "@types/node": "^22.5.5",
+        "laravel-vite-plugin": "^1.0",
         "typescript": "^5.4.5",
-        "vite": "^5.3.1"
-    },
-    "dependencies": {
-        "@fortawesome/fontawesome-free": "^6.5.2",
-        "@popperjs/core": "^2.11.8",
-        "bootstrap": "^5.3.3",
-        "laravel-echo": "^1.16.1",
-        "laravel-ts-utilities": "^4.1.2",
-        "luxon": "^3.4.4",
-        "pusher-js": "^8.4.0-rc2",
-        "slim-select": "^2.8.2",
-        "sweetalert2": "^11.11.1",
-        "tabulator-tables": "^6.2.1",
-        "ziggy-js": "^2.2.1"
+        "vite": "^5.0"
     },
     "engines": {
         "node": "^20.11.1",
