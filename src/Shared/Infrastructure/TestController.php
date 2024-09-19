@@ -2,14 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Src\Tests\Infrastructure;
+namespace Src\Shared\Infrastructure;
 
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Thehouseofel\Hexagonal\Infrastructure\Controllers\Controller;
 use Throwable;
 
 final class TestController extends Controller
 {
+    public function test(): View
+    {
+        return view('pages.shared.test');
+    }
+
     public function testJsonErrors(Request $request)
     {
         $isJsonError = $request->input('isJsonError') === "1";
