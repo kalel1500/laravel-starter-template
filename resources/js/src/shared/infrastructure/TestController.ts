@@ -1,8 +1,15 @@
-import {Test} from "laravel-ts-utilities";
+import {g, Test} from "laravel-ts-utilities";
 import {_const} from "../../../app/constants";
 import {__} from "../../../app/translations";
 
 export default class TestController {
+    test()
+    {
+        console.log('llega');
+        g.startTooltips();
+        console.log('continua?');
+    }
+
     testConstants() {
         Test.printConstant();
         console.log("-------------------------");
