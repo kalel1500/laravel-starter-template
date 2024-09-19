@@ -1,5 +1,6 @@
 import {defineConfig, loadEnv} from 'vite';
 import laravel from 'laravel-vite-plugin';
+import {laravelTsUtilsPlugin} from "laravel-ts-utilities/plugins";
 
 export default ({ mode }: { mode: string }) => {
     process.env = Object.assign(process.env, loadEnv(mode, process.cwd(), ''));
@@ -20,6 +21,7 @@ export default ({ mode }: { mode: string }) => {
                 input: ['resources/css/app.css', 'resources/js/app.ts'],
                 refresh: false,
             }),
+            laravelTsUtilsPlugin(),
         ],
         base: base,
         build: {

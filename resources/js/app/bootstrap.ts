@@ -22,7 +22,7 @@ import {Route, UtilitiesServiceProvider} from "laravel-ts-utilities";
 import {defineRoutes} from "./routes";
 
 // Definir que acciones ejecutar del paquete
-UtilitiesServiceProvider.features(["registerGlobalError", "enableTooltips", "enableNotifications"]);
+UtilitiesServiceProvider.features(["registerGlobalError", "enableNotifications"]);
 
 // Definimos y ejecutamos las rutas de JS
 defineRoutes();
