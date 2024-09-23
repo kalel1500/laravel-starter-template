@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import { laravelTsUtilsPlugin } from 'laravel-ts-utilities/plugins';
+import { laravelTsUtilsPlugin } from 'laravel-ts-utilities/dist/plugins';
 
 export default defineConfig({
     plugins: [
