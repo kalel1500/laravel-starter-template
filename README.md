@@ -36,6 +36,17 @@ Files:
 /package.json => "laravel-echo" and "pusher-js",
 ```
 
+## Laravel TypeScript Utilities
+
+By default, the initial front-end (TypeScript) files are not created.
+
+They are generated when the laravel-ts-utilities package is installed.
+
+If you want to force the file creation, you can run the following command:
+```
+node .\node_modules\laravel-ts-utilities\dist\scripts\postinstall.js
+```
+
 ## License
 
 Laravel starter template is open-sourced software licensed under the [GNU General Public License v3.0](LICENSE).
