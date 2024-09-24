@@ -9,6 +9,7 @@ A Laravel starter template.
 | *composer*: | ziggy                | `composer require tightenco/ziggy`                                                 |
 | *composer*: | hexagonal            | `composer require kalel1500/laravel-hexagonal-and-ddd-architecture-utilities@beta` |
 | *npm*:      | laravel-ts-utilities | `npm install laravel-ts-utilities`                                                 |
+| *npm*:      | tailwind css         | `npm install -D tailwindcss postcss autoprefixer`<br/>`npx tailwindcss init -p`    |
 | *artisan*:  | api                  | `php artisan install:api`                                                          |
 | *artisan*:  | broadcasting         | `php artisan install:broadcasting`                                                 |
 
@@ -42,6 +43,13 @@ If you want to force the file creation, you can run the following command:
 
 ```bash
 node .\node_modules\laravel-ts-utilities\dist\scripts\postinstall.js
+```
+
+### Tailwind Css
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
 ```
 
 ## Artisan packages  (files are modified)
