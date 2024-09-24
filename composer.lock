@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3356fe0024a612fa66a590cc3f6daad9",
+    "content-hash": "7e8c3c14ff33b199b4a0838993eb8423",
     "packages": [
         {
             "name": "brick/math",
@@ -1049,70 +1049,6 @@
                 }
             ],
             "time": "2023-12-03T19:50:20+00:00"
-        },
-        {
-            "name": "kalel1500/laravel-hexagonal-and-ddd-architecture-utilities",
-            "version": "v1.6.0-beta.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities.git",
-                "reference": "7fc70e607e34862ef9e5e4681019319090224768"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/zipball/7fc70e607e34862ef9e5e4681019319090224768",
-                "reference": "7fc70e607e34862ef9e5e4681019319090224768",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "laravel/framework": "^7.0|^8.0|^11.0",
-                "php": "^7.2.5|^8.0|^8.1|^8.2"
-            },
-            "require-dev": {
-                "orchestra/testbench": "^5|^6|^9"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Thehouseofel\\Hexagonal\\Infrastructure\\HexagonalServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/Domain/Helpers/DomainHeplers.php",
-                    "src/Infrastructure/Helpers/InfrastructureHeplers.php"
-                ],
-                "psr-4": {
-                    "Thehouseofel\\Hexagonal\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Adrian Canals Csefko",
-                    "email": "a.canals14@gmail.com"
-                }
-            ],
-            "description": "Utilidades para desarrollar en arquitectura hexagonal y DDD en laravel",
-            "keywords": [
-                "architecture",
-                "ddd",
-                "hexagonal",
-                "laravel",
-                "package",
-                "utilities"
-            ],
-            "support": {
-                "issues": "https://github.com/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/issues",
-                "source": "https://github.com/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/tree/v1.6.0-beta.1"
-            },
-            "time": "2024-09-12T13:34:25+00:00"
         },
         {
             "name": "laravel/framework",
@@ -5402,76 +5338,6 @@
             "time": "2024-08-30T16:12:47+00:00"
         },
         {
-            "name": "tightenco/ziggy",
-            "version": "v2.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tighten/ziggy.git",
-                "reference": "5395ba7c6d6ea1709acf5435694c4732c2912b5e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tighten/ziggy/zipball/5395ba7c6d6ea1709acf5435694c4732c2912b5e",
-                "reference": "5395ba7c6d6ea1709acf5435694c4732c2912b5e",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "laravel/framework": ">=9.0",
-                "php": ">=8.1"
-            },
-            "require-dev": {
-                "laravel/folio": "^1.1",
-                "orchestra/testbench": "^7.0 || ^8.0 || ^9.0",
-                "pestphp/pest": "^2.26",
-                "pestphp/pest-plugin-laravel": "^2.4"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Tighten\\Ziggy\\ZiggyServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Tighten\\Ziggy\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Coulbourne",
-                    "email": "daniel@tighten.co"
-                },
-                {
-                    "name": "Jake Bathman",
-                    "email": "jake@tighten.co"
-                },
-                {
-                    "name": "Jacob Baker-Kretzmar",
-                    "email": "jacob@tighten.co"
-                }
-            ],
-            "description": "Use your Laravel named routes in JavaScript.",
-            "homepage": "https://github.com/tighten/ziggy",
-            "keywords": [
-                "Ziggy",
-                "javascript",
-                "laravel",
-                "routes"
-            ],
-            "support": {
-                "issues": "https://github.com/tighten/ziggy/issues",
-                "source": "https://github.com/tighten/ziggy/tree/v2.3.0"
-            },
-            "time": "2024-07-21T16:18:39+00:00"
-        },
-        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "v2.2.7",
             "source": {
@@ -7884,9 +7750,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "kalel1500/laravel-hexagonal-and-ddd-architecture-utilities": 10
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
