@@ -23,6 +23,8 @@ composer require tightenco/ziggy
 
 ### Laravel hexagonal and ddd architecture utilities
 
+You must uncomment the package's ExceptionHandler in the `bootstap/app.php` file to enable package error handling.
+
 ```bash
 composer require kalel1500/laravel-hexagonal-and-ddd-architecture-utilities:@beta
 ```
