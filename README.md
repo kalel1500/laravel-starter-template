@@ -6,6 +6,12 @@ A Laravel starter template.
 
 ### 1.1. Fix .gitignore file
 
+Delete the last two lines of the `.gitignore` file as they are only there to prevent the package manager lock files from being saved in the template.
+```gitignore
+# delete
+composer.lock
+package-lock.json
+```
 Copy the contents of the `.gitignore.example` file to the `.gitignore` file.
 
 ### 1.2. Install Main packages
