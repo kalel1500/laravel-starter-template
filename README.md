@@ -2,61 +2,66 @@
 
 A Laravel starter template.
 
-## Main packages
+## 1. Steps for preparing the template
 
-| Type        | Name                 | Command                                                                            |
-|-------------|----------------------|------------------------------------------------------------------------------------|
-| *composer*: | ziggy                | `composer require tightenco/ziggy`                                                 |
-| *composer*: | hexagonal            | `composer require kalel1500/laravel-hexagonal-and-ddd-architecture-utilities@beta` |
-| *npm*:      | laravel-ts-utilities | `npm install laravel-ts-utilities`                                                 |
-| *npm*:      | tailwind css         | `npm install -D tailwindcss postcss autoprefixer`<br/>`npx tailwindcss init -p`    |
-| *artisan*:  | api                  | `php artisan install:api`                                                          |
-| *artisan*:  | broadcasting         | `php artisan install:broadcasting`                                                 |
+### 1.1. Fix .gitignore file
 
-## Composer packages
+Copy the contents of the `.gitignore.example` file to the `.gitignore` file.
 
-### Ziggy
+### 1.2. Install Main packages
 
-```bash
-composer require tightenco/ziggy
-```
+| Type        | Name                 | Command                                                                                         |
+|-------------|----------------------|-------------------------------------------------------------------------------------------------|
+| *composer*: | hexagonal            | `composer require kalel1500/laravel-hexagonal-and-ddd-architecture-utilities:@beta`             |
+| *composer*: | ziggy                | `composer require tightenco/ziggy`                                                              |
+| *npm*:      | tailwind css         | `npm install -D tailwindcss postcss autoprefixer`<br/>`npx tailwindcss init -p (don't execute)` |
+| *npm*:      | laravel-ts-utilities | `npm install laravel-ts-utilities`<br/>`npx laravel-ts-utilities`                               |
+| --          | --                   | --                                                                                              |
+| *artisan*:  | api                  | `php artisan install:api`                                                                       |
+| *artisan*:  | broadcasting         | `php artisan install:broadcasting`                                                              |
 
-### Laravel hexagonal and ddd architecture utilities
+## 2. Package documentation
 
-You must uncomment the package's ExceptionHandler in the `bootstap/app.php` file to enable package error handling.
+### 2.1. (composer) - laravel-hexagonal-and-ddd-architecture-utilities
 
 ```bash
 composer require kalel1500/laravel-hexagonal-and-ddd-architecture-utilities:@beta
 ```
 
-## NPM packages
+You must uncomment the package's ExceptionHandler in the `bootstap/app.php` file to enable package error handling.
+```php
+->withExceptions(function (Exceptions $exceptions) {
+    $callback = \Thehouseofel\Hexagonal\Infrastructure\Exceptions\ExceptionHandler::getUsingCallback();
+    $callback($exceptions);
+})
+```
 
-### Laravel TypeScript Utilities
+### 2.2 (npm) - tailwindcss
 
-By default, the initial front-end (TypeScript) files are not created.
+```bash
+npm install -D tailwindcss postcss autoprefixer
+# npx tailwindcss init -p # (don't execute)
+```
 
-They are generated when the laravel-ts-utilities package is installed.
+### 2.3 (npm) - laravel-ts-utilities
 
 ```bash
 npm install laravel-ts-utilities
 ```
 
-If you want to force the file creation, you can run the following command:
+By default, the initial front-end (TypeScript and Css) files are not created.
+
+The package provides a command to create the necessary files
 
 ```bash
-node .\node_modules\laravel-ts-utilities\dist\scripts\postinstall.js
+npx laravel-ts-utilities # (create all files)
+# or
+npx laravel-ts-utilities typescript # (only create typescript files)
+# or
+npx laravel-ts-utilities tailwind # (only create tailwind files)
 ```
 
-### Tailwind Css
-
-```bash
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-## Artisan packages  (files are modified)
-
-### APi
+### 2.4 (artisan) - Api (files are modified)
 
 If your application will also offer a stateless API, you may enable API routing using the install:api Artisan command:
 ```bash
@@ -72,7 +77,7 @@ Files that change:
 /composer.json => "laravel/sanctum",
 ```
 
-### Broadcasting
+### 2.5 (artisan) - Broadcasting (files are modified)
 
 By default, broadcasting is not enabled in new Laravel applications. You may enable broadcasting using the install:broadcasting Artisan command:
 ```bash
@@ -90,6 +95,6 @@ Files that change:
 /package.json => "laravel-echo" and "pusher-js",
 ```
 
-## License
+## 3. License
 
 Laravel starter template is open-sourced software licensed under the [GNU General Public License v3.0](LICENSE).
