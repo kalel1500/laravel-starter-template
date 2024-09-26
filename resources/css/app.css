@@ -1,0 +1,9 @@
+/*----- Tailwind css -----*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*----- App css -----*/
+.test {
+    background-color: red;
+}
