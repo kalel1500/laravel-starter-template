@@ -22,37 +22,31 @@
         <link rel="icon" href="{{ \Illuminate\Support\Facades\Vite::asset('resources/images/favicon.ico') }}">
     </head>
 
-    <body class="sidebar-collapse">
+    <body class="bg-gray-100">
+
+        <!-- Navbar -->
+        <x-includes.navbar/>
 
         <!-- Sidebar -->
         <x-includes.sidebar/>
-        <!-- /.Sidebar -->
 
-        <!-- Page container -->
-        <div class="page-container"> {{-- Esto es para dar espacio al sidebar--}}
-
-            <!-- Navbar -->
-            <x-includes.navbar/>
-            <!-- /.Navbar -->
+        <!-- Wrapper -->
+        <div class="p-4 sm:ml-64 mt-14">
 
             <!-- Main -->
-            <main class="main-content">
+            <main class="bg-blue-500">
 
-                {{--Mensajes de error o de success--}}
+                <!-- App mensajes -->
                 <x-includes.messages/>
 
-                {{--Contenido de la app--}}
+                <!-- Page content -->
                 {{ $slot }}
 
             </main>
-            <!-- /.Main -->
 
             <!-- Footer -->
             <x-includes.footer/>
-            <!-- /.Footer -->
-
         </div>
-        <!-- ./Page container -->
 
     </body>
 </html>
