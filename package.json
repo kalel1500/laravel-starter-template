@@ -20,6 +20,6 @@
         "npm": "^10.5.0"
     },
     "dependencies": {
-        "laravel-ts-utilities": "^1.2.0-beta.13"
+        "laravel-ts-utilities": "^1.2.0-beta.14"
     }
 }
