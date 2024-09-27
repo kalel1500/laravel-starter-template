@@ -13,6 +13,9 @@ declare global {
     }
 }
 
+// Importar plugins
+import 'flowbite';
+
 // INICIALIZAR CONSTANTES Y TRADUCCIONES (para que se apliquen en el paquete aunque no se utilicen en la app)
 import './constants';
 import './translations';
