@@ -18,7 +18,7 @@
                 </svg>
                 <span class="sr-only">Toggle sidebar</span>
             </button>
-            <a href="https://flowbite.com" class="flex items-center justify-between mr-4">
+            <a href="https://flowbite.com" class="flex items-center justify-between mr-4 lg:mr-20">
                 <img src="https://flowbite.s3.amazonaws.com/logo.svg" class="mr-3 h-8" alt="{{ config('app.name') }} Logo"/>
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">{{ config('app.name') }}</span>
             </a>

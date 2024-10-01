@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
         screens: {
-            'vsm': '400px'
+            'vsm': '440px'
         }
     },
   },
