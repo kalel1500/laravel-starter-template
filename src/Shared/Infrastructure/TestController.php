@@ -48,4 +48,9 @@ final class TestController extends Controller
         }
 
     }
+
+    public function tailwind(): View
+    {
+        return view('pages.shared.tailwind-example');
+    }
 }
