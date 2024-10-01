@@ -8,7 +8,11 @@ export default {
     "./node_modules/flowbite/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+        screens: {
+            'vsm': '400px'
+        }
+    },
   },
   plugins: [
     require('flowbite/plugin')
