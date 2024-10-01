@@ -34,7 +34,8 @@
         <div class="p-4 md:ml-64 h-auto pt-20">
 
             <!-- Main -->
-            <main class="border-2 border-dashed border-gray-300 dark:border-gray-600 p-2">
+            @php($mainClass = config('hexagonal.blade_show_main_border') ? 'border-2 border-dashed border-gray-300 dark:border-gray-600 p-2' : null)
+            <main class="{{ $mainClass }}">
 
                 <!-- App mensajes -->
                 <x-includes.messages/>
