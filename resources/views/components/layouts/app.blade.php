@@ -31,7 +31,7 @@
         <x-includes.sidebar/>
 
         <!-- Wrapper -->
-        <div class="p-4 sm:ml-64 mt-14">
+        <div class="p-4 sm:ml-64 mt-16">
 
             <!-- Main -->
             <main class="bg-blue-500">
