@@ -1,7 +1,7 @@
 <nav class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
     <div class="flex flex-wrap justify-between items-center">
         <!-- Left side -->
-        <div class="flex justify-start items-center">
+        <div class="hidden vsm:flex justify-start items-center">
             <!-- Collapse button (big screen) -->
             <button id="toggleSidebar" aria-expanded="true" aria-controls="logo-sidebar" class="hidden p-2 mr-3 text-gray-600 rounded cursor-pointer md:inline hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700">
                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12"> <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h14M1 6h14M1 11h7"/> </svg>
