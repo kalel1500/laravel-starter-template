@@ -22,7 +22,7 @@
         <link rel="icon" href="{{ \Illuminate\Support\Facades\Vite::asset('resources/images/favicon.ico') }}">
     </head>
 
-    <body class="bg-gray-100">
+    <body class="antialiased bg-gray-50 dark:bg-gray-900">
 
         <!-- Navbar -->
         <x-includes.navbar/>
@@ -31,10 +31,10 @@
         <x-includes.sidebar/>
 
         <!-- Wrapper -->
-        <div class="p-4 sm:ml-64 mt-16">
+        <div class="p-4 md:ml-64 h-auto pt-20">
 
             <!-- Main -->
-            <main class="bg-blue-500">
+            <main class="border-2 border-dashed border-gray-300 dark:border-gray-600 p-2">
 
                 <!-- App mensajes -->
                 <x-includes.messages/>
