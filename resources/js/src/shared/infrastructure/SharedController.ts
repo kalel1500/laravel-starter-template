@@ -1,3 +1,4 @@
+import Mutation from '../Domain/Mutation';
 
 export default class SharedController
 {
@@ -55,6 +56,20 @@ export default class SharedController
                 }
             }
 
+        });
+    }
+
+    drawer()
+    {
+        Mutation.observe({
+            elementId: 'drawer-navigation',
+            class: '-translate-x-full',
+            whenHave: () => {
+                console.log('cerrado');
+            },
+            whenHavent: () => {
+                console.log('abierto');
+            }
         });
     }
 }
