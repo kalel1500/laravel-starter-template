@@ -5,6 +5,7 @@ import SharedController from "../src/shared/infrastructure/SharedController";
 
 export function defineRoutes(): void {
     Route.all([SharedController, 'layout'], []);
+    Route.all([SharedController, 'drawer'], []);
 
     Route.page('shared.test', [TestController, 'test']);
     Route.page('home.index', [HomeController, 'index']);
