@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin';
 
 export default {
   content: [
@@ -16,7 +17,10 @@ export default {
     },
   },
   plugins: [
-    require('flowbite/plugin')
+    require('flowbite/plugin'),
+    plugin(function ({ addVariant }) {
+      addVariant('sc', '&:is(.sc *)');
+    })
   ],
 } satisfies Config
 
