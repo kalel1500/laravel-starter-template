@@ -15,5 +15,21 @@ export default class SidebarUseCase extends Instantiable
                 console.log('abierto');
             }
         });
+
+        let isCollapsed = false;
+        const toggleSidebar = document.getElementById('toggleSidebar');
+        if (toggleSidebar === null) return;
+        toggleSidebar.addEventListener('click', () => {
+            console.log('toggleSidebar', isCollapsed);
+            if (isCollapsed) {
+                document.documentElement.classList.remove('sc');
+                isCollapsed = false;
+            } else {
+                document.documentElement.classList.add('sc');
+                isCollapsed = true;
+            }
+
+
+        });
     }
 }
