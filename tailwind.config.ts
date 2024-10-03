@@ -1,4 +1,5 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from 'tailwindcss'
+
 export default {
   content: [
     "./resources/**/*.blade.php",
@@ -9,12 +10,13 @@ export default {
   ],
   theme: {
     extend: {
-        screens: {
-            'vsm': '440px'
-        }
+      screens: {
+        'vsm': '440px'
+      }
     },
   },
   plugins: [
     require('flowbite/plugin')
-  ]
-}
+  ],
+} satisfies Config
+
