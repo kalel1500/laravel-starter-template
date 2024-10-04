@@ -41,7 +41,7 @@
                 {{ $breadcrumb ?? '' }}
 
                 <!-- Page mensajes -->
-                <x-app-message/>
+                <x-messages/>
 
                 <!-- Page content -->
                 {{ $slot }}
