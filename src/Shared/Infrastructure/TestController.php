@@ -53,4 +53,10 @@ final class TestController extends Controller
     {
         return view('pages.shared.tailwind-example');
     }
+
+    public function testFlash()
+    {
+//        return redirect()->route('home.example1')->with('error', 'aaa');
+        return redirect()->route('home.example1')->with('severalErrors', ['titulo', 'primero', 'seg']);
+    }
 }
