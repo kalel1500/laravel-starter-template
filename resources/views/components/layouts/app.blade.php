@@ -22,7 +22,7 @@
         <link rel="icon" href="{{ \Illuminate\Support\Facades\Vite::asset('resources/images/favicon.ico') }}">
     </head>
 
-    <body class="antialiased bg-gray-50 dark:bg-gray-900">
+    <body class="bg-gray-50 antialiased dark:bg-gray-900">
 
         <!-- Navbar -->
         <x-includes.navbar/>
@@ -31,10 +31,10 @@
         <x-includes.sidebar/>
 
         <!-- Wrapper -->
-        <div class="p-4 md:ml-64 h-auto pt-20">
+        <div class="h-auto p-4 pt-20 md:ml-64">
 
             <!-- Main -->
-            @php($mainClass = config('hexagonal.blade_show_main_border') ? 'border-2 border-dashed border-gray-300 dark:border-gray-600 p-2' : null)
+            @php($mainClass = config('hexagonal.blade_show_main_border') ? 'border-2 border-dashed border-gray-300 p-2 dark:border-gray-600' : null)
             <main class="{{ $mainClass }}">
 
                 <!-- Page breadcrumb -->
