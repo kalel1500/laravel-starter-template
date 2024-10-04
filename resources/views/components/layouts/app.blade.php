@@ -25,10 +25,10 @@
     <body class="bg-gray-50 antialiased dark:bg-gray-900">
 
         <!-- Navbar -->
-        <x-includes.navbar/>
+        <x-navbar/>
 
         <!-- Sidebar -->
-        <x-includes.sidebar/>
+        <x-sidebar/>
 
         <!-- Wrapper -->
         <div class="h-auto p-4 pt-20 md:ml-64">
@@ -41,7 +41,7 @@
                 {{ $breadcrumb ?? '' }}
 
                 <!-- Page mensajes -->
-                <x-includes.messages/>
+                <x-app-message/>
 
                 <!-- Page content -->
                 {{ $slot }}
@@ -49,7 +49,7 @@
             </main>
 
             <!-- Footer -->
-            <x-includes.footer/>
+            <x-footer/>
         </div>
 
     </body>
