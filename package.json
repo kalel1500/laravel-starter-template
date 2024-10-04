@@ -12,6 +12,9 @@
         "flowbite": "^2.5.1",
         "laravel-vite-plugin": "^1.0",
         "postcss": "^8.4.47",
+        "prettier": "^3.3.3",
+        "prettier-plugin-blade": "^2.1.19",
+        "prettier-plugin-tailwindcss": "^0.6.8",
         "tailwindcss": "^3.4.13",
         "typescript": "^5.6.2",
         "vite": "^5.0"
