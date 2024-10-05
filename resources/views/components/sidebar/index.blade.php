@@ -97,8 +97,9 @@
                     </li>
                 </ul>
             </li>
-        </ul>
-        <ul class="mt-5 space-y-2 border-t border-gray-200 pt-5 dark:border-gray-700">
+            <li>
+                <hr class="h-px my-5 bg-gray-200 border-0 dark:bg-gray-700">
+            </li>
             <li>
                 <a href="#" class="group flex w-full items-center rounded-lg p-2 text-base font-medium text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
                     <svg aria-hidden="true" class="h-6 w-6 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
