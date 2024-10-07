@@ -1,13 +1,13 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Sidebar;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 use Src\Shared\Domain\Objects\Collections\SidebarLinkCollection;
 
-class Sidebar extends Component
+class Full extends Component
 {
     /**
      * Create a new component instance.
@@ -24,6 +24,6 @@ class Sidebar extends Component
     {
 //        $links = SidebarLinkCollection::fromArray(config('template.sidebar_links'));
 //        dd($links);
-        return view('components.sidebar.index');
+        return view('components.sidebar.full');
     }
 }

@@ -28,7 +28,7 @@
         <x-navbar/>
 
         <!-- Sidebar -->
-        <x-sidebar/>
+        <x-sidebar.full/>
 
         <!-- Wrapper -->
         <div class="h-auto p-4 pt-20 md:ml-64">
