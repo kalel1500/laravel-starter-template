@@ -18,4 +18,9 @@ final class HomeController extends Controller
     {
         return view('pages.home.example2');
     }
+
+    public function example3(): View
+    {
+        return view('pages.home.example3');
+    }
 }

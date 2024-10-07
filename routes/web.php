@@ -13,3 +13,4 @@ Route::get('/testFlash', [TestController::class, 'testFlash']);
 
 Route::get('/home/example1', [HomeController::class, 'example1'])->name('home.example1');
 Route::get('/home/example2', [HomeController::class, 'example2'])->name('home.example2');
+Route::get('/home/example3', [HomeController::class, 'example3'])->name('home.example3');

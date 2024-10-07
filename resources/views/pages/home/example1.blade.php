@@ -1,4 +1,4 @@
-<x-layouts.app title="Page name">
+<x-layouts.app title="Example 2">
 
     <x-slot:breadcrumb>
 
