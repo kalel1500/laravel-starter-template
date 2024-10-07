@@ -1,11 +1,5 @@
-<x-layouts.app title="Page name">
-    {{--
-    <x-slot:title>
-        Custom Title
-    </x-slot>
-    --}}
-
-    <div>
+<x-layouts.app title="Test">
+    <div class="bg-white dark:bg-gray-800 p-5 rounded dark:text-gray-400 shadow">
         <div>Hola mundo</div>
         <div class="card-header--new">
             <div>card-header--new__div1</div>
