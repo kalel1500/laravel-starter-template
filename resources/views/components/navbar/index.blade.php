@@ -28,7 +28,7 @@
                     <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                         <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path></svg>
                     </div>
-                    <input type="text" name="email" id="topbar-search" class="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400" placeholder="Search"/>
+                    <input type="text" name="email" id="topbar-search" class="focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400" placeholder="Search"/>
                 </div>
             </form>
         </div>
@@ -61,7 +61,7 @@
                     <a href="#" class="flex border-b px-4 py-3 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-600">
                         <div class="flex-shrink-0">
                             <img class="h-11 w-11 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Bonnie Green avatar"/>
-                            <div class="bg-primary-700 absolute -mt-5 ml-6 flex h-5 w-5 items-center justify-center rounded-full border border-white dark:border-gray-700">
+                            <div class="bg-blue-700 absolute -mt-5 ml-6 flex h-5 w-5 items-center justify-center rounded-full border border-white dark:border-gray-700">
                                 <svg aria-hidden="true" class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path>
                                     <path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path>
@@ -73,7 +73,7 @@
                                 New message from
                                 <span class="font-semibold text-gray-900 dark:text-white">Bonnie Green</span>: "Hey, what's up? All set for the presentation?"
                             </div>
-                            <div class="text-primary-600 dark:text-primary-500 text-xs font-medium">a few moments ago</div>
+                            <div class="text-blue-600 dark:text-blue-500 text-xs font-medium">a few moments ago</div>
                         </div>
                     </a>
                     <a href="#" class="flex border-b px-4 py-3 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-600">
@@ -87,7 +87,7 @@
                         </div>
                         <div class="w-full pl-3">
                             <div class="mb-1.5 text-sm font-normal text-gray-500 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Jese leos</span>and<span class="font-medium text-gray-900 dark:text-white">5 others</span>started following you.</div>
-                            <div class="text-primary-600 dark:text-primary-500 text-xs font-medium">10 minutes ago</div>
+                            <div class="text-blue-600 dark:text-blue-500 text-xs font-medium">10 minutes ago</div>
                         </div>
                     </a>
                     <a href="#" class="flex border-b px-4 py-3 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-600">
@@ -101,7 +101,7 @@
                         </div>
                         <div class="w-full pl-3">
                             <div class="mb-1.5 text-sm font-normal text-gray-500 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Joseph Mcfall</span>and<span class="font-medium text-gray-900 dark:text-white">141 others</span>love your story. See it and view more stories.</div>
-                            <div class="text-primary-600 dark:text-primary-500 text-xs font-medium">44 minutes ago</div>
+                            <div class="text-blue-600 dark:text-blue-500 text-xs font-medium">44 minutes ago</div>
                         </div>
                     </a>
                     <a href="#" class="flex border-b px-4 py-3 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-600">
@@ -114,8 +114,8 @@
                             </div>
                         </div>
                         <div class="w-full pl-3">
-                            <div class="mb-1.5 text-sm font-normal text-gray-500 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Leslie Livingston</span>mentioned you in a comment:<span class="text-primary-600 dark:text-primary-500 font-medium">@bonnie.green</span>what do you say?</div>
-                            <div class="text-primary-600 dark:text-primary-500 text-xs font-medium">1 hour ago</div>
+                            <div class="mb-1.5 text-sm font-normal text-gray-500 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Leslie Livingston</span>mentioned you in a comment:<span class="text-blue-600 dark:text-blue-500 font-medium">@bonnie.green</span>what do you say?</div>
+                            <div class="text-blue-600 dark:text-blue-500 text-xs font-medium">1 hour ago</div>
                         </div>
                     </a>
                     <a href="#" class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
@@ -129,7 +129,7 @@
                         </div>
                         <div class="w-full pl-3">
                             <div class="mb-1.5 text-sm font-normal text-gray-500 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Robert Brown</span>posted a new video: Glassmorphism - learn how to implement the new design trend.</div>
-                            <div class="text-primary-600 dark:text-primary-500 text-xs font-medium">3 hours ago</div>
+                            <div class="text-blue-600 dark:text-blue-500 text-xs font-medium">3 hours ago</div>
                         </div>
                     </a>
                 </div>
@@ -251,7 +251,7 @@
                     <li>
                         <a href="#" class="flex items-center justify-between px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                             <span class="flex items-center">
-                                <svg aria-hidden="true" class="text-primary-600 dark:text-primary-500 mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <svg aria-hidden="true" class="text-blue-600 dark:text-blue-500 mr-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path>
                                 </svg>
                                 Pro version
