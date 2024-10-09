@@ -25,7 +25,7 @@
     <body class="bg-gray-50 antialiased dark:bg-gray-900">
 
         <!-- Navbar -->
-        <x-navbar/>
+        <x-navbar.full/>
 
         <!-- Sidebar -->
         <x-sidebar.full/>
