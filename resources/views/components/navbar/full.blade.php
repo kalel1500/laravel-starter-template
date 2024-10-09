@@ -1,3 +1,4 @@
+<!-- Old -->
 <nav class="fixed left-0 right-0 top-0 z-50 border-b border-gray-200 bg-white px-4 py-2.5 dark:border-gray-700 dark:bg-gray-800">
     <div class="flex flex-wrap items-center justify-between">
         <!-- Left side -->
@@ -144,15 +145,15 @@
             </div>
 
             <!-- Apps -->
-            <button type="button" data-dropdown-toggle="apps-dropdown" class="mr-1 rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:ring-4 focus:ring-gray-300 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-600">
-                <span class="sr-only">View notifications</span>
-                <!-- Icon -->
+            <button type="button" data-dropdown-toggle="dropdown-apps" class="mr-1 rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:ring-4 focus:ring-gray-300 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-600">
+                <span class="sr-only">View other links of the application</span>
+                <!-- Apps icon -->
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
                 </svg>
             </button>
-            <!-- Apps dropdown -->
-            <div class="z-50 my-4 hidden max-w-sm list-none divide-y divide-gray-100 overflow-hidden rounded rounded-xl bg-white text-base shadow-lg dark:divide-gray-600 dark:bg-gray-700" id="apps-dropdown">
+            <!-- Dropdown apps -->
+            <div id="dropdown-apps" class="z-50 my-4 hidden max-w-sm list-none divide-y divide-gray-100 overflow-hidden rounded bg-white text-base shadow-lg dark:divide-gray-600 dark:bg-gray-700">
                 <div class="block bg-gray-50 px-4 py-2 text-center text-base font-medium text-gray-700 dark:bg-gray-600 dark:text-gray-300">
                     Apps
                 </div>
@@ -221,17 +222,19 @@
                 </div>
                 <!-- Other links -->
                 <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
-                    <!-- Links 1 -->
+                    <!-- Link 1 -->
                     <li>
-                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">My profile</a>
+                        <a href="#" class="flex items-center px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">My profile</a>
                     </li>
-                    <!-- Links 2 -->
+                    <!-- Link 2 -->
                     <li>
-                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white">Account settings</a>
+                        <a href="#" class="flex items-center px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Account settings</a>
                     </li>
-                </ul>
-                <!-- Other links 2 -->
-                <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
+                    <!-- Separator -->
+                    <li>
+                        <hr class="h-px my-2 bg-gray-100 border-0 dark:bg-gray-600">
+                    </li>
+                    <!-- Link 3 -->
                     <li>
                         <a href="#" class="flex items-center px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                             <svg class="mr-2 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -240,6 +243,7 @@
                             My likes
                         </a>
                     </li>
+                    <!-- Link 4 -->
                     <li>
                         <a href="#" class="flex items-center px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                             <svg class="mr-2 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -248,6 +252,7 @@
                             Collections
                         </a>
                     </li>
+                    <!-- Link 5 -->
                     <li>
                         <a href="#" class="flex items-center justify-between px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                             <span class="flex items-center">
@@ -261,14 +266,17 @@
                             </svg>
                         </a>
                     </li>
-                </ul>
-                <!-- Other links 3 -->
-                <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
+                    <!-- Separator -->
                     <li>
-                        <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                        <hr class="h-px my-2 bg-gray-100 border-0 dark:bg-gray-600">
+                    </li>
+                    <!-- Link 6 -->
+                    <li>
+                        <a href="#" class="flex items-center px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
                     </li>
                 </ul>
             </div>
+
         </div>
     </div>
 </nav>
