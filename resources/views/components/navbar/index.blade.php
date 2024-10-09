@@ -2,147 +2,56 @@
     <div class="flex flex-wrap items-center justify-between">
         <!-- Left side -->
         <div class="hidden items-center justify-start vsm:flex">
-            <!-- Collapse button (big screen) -->
-            <button id="toggleSidebar" aria-expanded="true" aria-controls="logo-sidebar" class="mr-3 hidden cursor-pointer rounded p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:inline">
-                <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h14M1 6h14M1 11h7"/></svg>
-            </button>
-            <!-- Hide/show button (small screen) -->
-            <button data-drawer-target="drawer-navigation" data-drawer-toggle="drawer-navigation" aria-controls="drawer-navigation" class="mr-2 cursor-pointer rounded-lg p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:ring-2 focus:ring-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:bg-gray-700 dark:focus:ring-gray-700 md:hidden">
-                <!-- svg open sidebar -->
-                <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                </svg>
-                <!-- svg close sidebar -->
-                <svg aria-hidden="true" class="hidden h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                </svg>
-                <span class="sr-only">Toggle sidebar</span>
-            </button>
-            <a href="https://flowbite.com" class="mr-4 flex items-center justify-between lg:mr-20">
-                <img src="https://flowbite.s3.amazonaws.com/logo.svg" class="mr-3 h-8" alt="{{ config('app.name') }} Logo"/>
-                <span class="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">{{ config('app.name') }}</span>
-            </a>
-            <form action="#" method="GET" class="hidden md:block md:pl-2">
-                <label for="topbar-search" class="sr-only">Search</label>
-                <div class="relative md:w-64 lg:w-96">
-                    <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-                        <svg class="h-5 w-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path></svg>
-                    </div>
-                    <input type="text" name="email" id="topbar-search" class="focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 pl-10 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400" placeholder="Search"/>
-                </div>
-            </form>
+            <x-navbar.hamburger-icon/>
+
+            <x-navbar.brand/>
+
+            <x-navbar.search-form/>
         </div>
 
         <!-- Right side -->
         <div class="flex items-center lg:order-2">
             <!-- Toggle sidebar mobile search -->
-            <button type="button" data-drawer-toggle="drawer-navigation" aria-controls="drawer-navigation" class="mr-1 rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:ring-4 focus:ring-gray-300 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-600 md:hidden">
-                <span class="sr-only">Toggle search</span>
-                <!-- Search icon -->
-                <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"></path>
-                </svg>
-            </button>
+            <x-navbar.search-toggle-mobile/>
 
             <!-- Notifications -->
-            <button type="button" data-dropdown-toggle="notification-dropdown" class="mr-1 rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:ring-4 focus:ring-gray-300 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-600">
-                <span class="sr-only">View notifications</span>
+            <x-navbar.item id="notifications" text="View notifications">
                 <!-- Bell icon -->
-                <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
-                </svg>
-            </button>
-            <!-- Dropdown menu -->
-            <div class="z-50 my-4 hidden max-w-sm list-none divide-y divide-gray-100 overflow-hidden rounded rounded-xl bg-white text-base shadow-lg dark:divide-gray-600 dark:bg-gray-700" id="notification-dropdown">
-                <div class="block bg-gray-50 px-4 py-2 text-center text-base font-medium text-gray-700 dark:bg-gray-600 dark:text-gray-300">
-                    Notifications
-                </div>
-                <div>
-                    <a href="#" class="flex border-b px-4 py-3 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-600">
-                        <div class="flex-shrink-0">
-                            <img class="h-11 w-11 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="Bonnie Green avatar"/>
-                            <div class="bg-blue-700 absolute -mt-5 ml-6 flex h-5 w-5 items-center justify-center rounded-full border border-white dark:border-gray-700">
-                                <svg aria-hidden="true" class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path>
-                                    <path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="w-full pl-3">
-                            <div class="mb-1.5 text-sm font-normal text-gray-500 dark:text-gray-400">
-                                New message from
-                                <span class="font-semibold text-gray-900 dark:text-white">Bonnie Green</span>: "Hey, what's up? All set for the presentation?"
-                            </div>
-                            <div class="text-blue-600 dark:text-blue-500 text-xs font-medium">a few moments ago</div>
-                        </div>
-                    </a>
-                    <a href="#" class="flex border-b px-4 py-3 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-600">
-                        <div class="flex-shrink-0">
-                            <img class="h-11 w-11 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="Jese Leos avatar"/>
-                            <div class="absolute -mt-5 ml-6 flex h-5 w-5 items-center justify-center rounded-full border border-white bg-gray-900 dark:border-gray-700">
-                                <svg aria-hidden="true" class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="w-full pl-3">
-                            <div class="mb-1.5 text-sm font-normal text-gray-500 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Jese leos</span>and<span class="font-medium text-gray-900 dark:text-white">5 others</span>started following you.</div>
-                            <div class="text-blue-600 dark:text-blue-500 text-xs font-medium">10 minutes ago</div>
-                        </div>
-                    </a>
-                    <a href="#" class="flex border-b px-4 py-3 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-600">
-                        <div class="flex-shrink-0">
-                            <img class="h-11 w-11 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="Joseph McFall avatar"/>
-                            <div class="absolute -mt-5 ml-6 flex h-5 w-5 items-center justify-center rounded-full border border-white bg-red-600 dark:border-gray-700">
-                                <svg aria-hidden="true" class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="w-full pl-3">
-                            <div class="mb-1.5 text-sm font-normal text-gray-500 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Joseph Mcfall</span>and<span class="font-medium text-gray-900 dark:text-white">141 others</span>love your story. See it and view more stories.</div>
-                            <div class="text-blue-600 dark:text-blue-500 text-xs font-medium">44 minutes ago</div>
-                        </div>
-                    </a>
-                    <a href="#" class="flex border-b px-4 py-3 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-600">
-                        <div class="flex-shrink-0">
-                            <img class="h-11 w-11 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="Roberta Casas image"/>
-                            <div class="absolute -mt-5 ml-6 flex h-5 w-5 items-center justify-center rounded-full border border-white bg-green-400 dark:border-gray-700">
-                                <svg aria-hidden="true" class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="w-full pl-3">
-                            <div class="mb-1.5 text-sm font-normal text-gray-500 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Leslie Livingston</span>mentioned you in a comment:<span class="text-blue-600 dark:text-blue-500 font-medium">@bonnie.green</span>what do you say?</div>
-                            <div class="text-blue-600 dark:text-blue-500 text-xs font-medium">1 hour ago</div>
-                        </div>
-                    </a>
-                    <a href="#" class="flex px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-600">
-                        <div class="flex-shrink-0">
-                            <img class="h-11 w-11 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/robert-brown.png" alt="Robert image" />
-                            <div class="absolute -mt-5 ml-6 flex h-5 w-5 items-center justify-center rounded-full border border-white bg-purple-500 dark:border-gray-700">
-                                <svg aria-hidden="true" class="h-3 w-3 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="w-full pl-3">
-                            <div class="mb-1.5 text-sm font-normal text-gray-500 dark:text-gray-400"><span class="font-semibold text-gray-900 dark:text-white">Robert Brown</span>posted a new video: Glassmorphism - learn how to implement the new design trend.</div>
-                            <div class="text-blue-600 dark:text-blue-500 text-xs font-medium">3 hours ago</div>
-                        </div>
-                    </a>
-                </div>
-                <a href="#" class="text-md block bg-gray-50 py-2 text-center font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-600 dark:text-white dark:hover:underline">
-                    <div class="inline-flex items-center">
-                        <svg aria-hidden="true" class="mr-2 h-4 w-4 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        View all
-                    </div>
-                </a>
-            </div>
+                <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>
+
+                <x-slot:subitems title="Notifications">
+                    <x-navbar.subitem.list time="a few moments ago" href="#">
+                        <x-slot:icon><x-icon.user/></x-slot:icon>
+                        New message from <x-text.semibold>Bonnie Green</x-text.semibold>: "Hey, what's up? All set for the presentation?"
+                    </x-navbar.subitem.list>
+
+                    <x-navbar.subitem.list time="10 minutes ago" href="#">
+                        <x-slot:icon><x-icon.user/></x-slot:icon>
+                        <x-text.semibold>Jese leos</x-text.semibold> and <x-text.semibold>5 others</x-text.semibold> started following you.
+                    </x-navbar.subitem.list>
+
+                    <x-navbar.subitem.list time="44 minutes ago" href="#">
+                        <x-slot:icon><x-icon.user/></x-slot:icon>
+                        <x-text.semibold>Joseph Mcfall</x-text.semibold> and <x-text.semibold>141 others</x-text.semibold> love your story. See it and view more stories.
+                    </x-navbar.subitem.list>
+
+                    <x-navbar.subitem.list time="1 hour ago" href="#">
+                        <x-slot:icon><x-icon.user/></x-slot:icon>
+                        <x-text.semibold>Leslie Livingston</x-text.semibold> mentioned you in a comment: <span class="text-blue-600 dark:text-blue-500 font-medium">@bonnie.green</span> what do you say?
+                    </x-navbar.subitem.list>
+
+                    <x-navbar.subitem.list time="3 hours ago" href="#">
+                        <x-slot:icon><x-icon.user/></x-slot:icon>
+                        <x-text.semibold>Robert Brown</x-text.semibold> posted a new video: Glassmorphism - learn how to implement the new design trend.
+                    </x-navbar.subitem.list>
+
+                </x-slot:subitems>
+
+                <x-slot:dropdownFooter href="#">
+                    <svg aria-hidden="true" class="mr-2 h-4 w-4 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+                    View all
+                </x-slot:dropdownFooter>
+            </x-navbar.item>
 
             <!-- Apps -->
             <button type="button" data-dropdown-toggle="apps-dropdown" class="mr-1 rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:ring-4 focus:ring-gray-300 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-600">
@@ -198,14 +107,7 @@
             </div>
 
             <!-- Theme toggle -->
-            <button id="theme-toggle" data-tooltip-target="tooltip-toggle" type="button" class="mr-1 rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:ring-4 focus:ring-gray-300 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-600">
-                <svg id="theme-toggle-dark-icon" class="hidden h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                <svg id="theme-toggle-light-icon" class="hidden h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-            </button>
-            <div id="tooltip-toggle" role="tooltip" class="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(778.5px, 60px, 0px)" data-popper-placement="bottom">
-                Toggle dark mode
-                <div class="tooltip-arrow" data-popper-arrow="" style="position: absolute; left: 0px; transform: translate3d(68.5px, 0px, 0px)"></div>
-            </div>
+            <x-navbar.theme-toggle/>
 
             <!-- User image -->
             <button type="button" class="mx-3 flex rounded-full bg-gray-800 text-sm focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 md:mr-0" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
