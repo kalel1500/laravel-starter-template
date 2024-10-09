@@ -20,6 +20,13 @@
         $dropdownIsOpen = in_array($currentUrl, $hrefs); // Comprueba si la URL actual está en la lista
     }
 
+    /*
+     * Código interesante por si queremos sobreescribir las clases del svg en lugar de envolverlo con un div
+    // Obtén el HTML del SVG desde $icon
+    $iconHtml = $icon->toHtml(); // Asegúrate de que $icon puede ser convertido a HTML.
+    // Reemplaza la clase del SVG
+    $modifiedIconHtml = preg_replace('/class="([^"]*)"/', 'class="h-6 w-6 flex-shrink-0 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white"',$iconHtml);
+    */
 @endphp
 
 <li>
