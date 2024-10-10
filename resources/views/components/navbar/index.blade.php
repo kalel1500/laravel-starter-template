@@ -20,7 +20,7 @@
                 <!-- Bell icon -->
                 <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>
 
-                <x-slot:subitems title="Notifications">
+                <x-slot:subitems big-list title="Notifications">
                     <x-navbar.subitem.list time="a few moments ago" href="#">
                         <x-slot:icon><x-icon.user/></x-slot:icon>
                         New message from <x-text.semibold>Bonnie Green</x-text.semibold>: "Hey, what's up? All set for the presentation?"
@@ -59,7 +59,7 @@
                 <!-- Apps icon -->
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
 
-                <x-slot:subitems square title="Apps">
+                <x-slot:subitems big-square title="Apps">
                     <x-navbar.subitem.square href="#" text="Sales">
                         <svg aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
                     </x-navbar.subitem.square>
@@ -92,6 +92,17 @@
 
             <!-- Theme toggle -->
             <x-navbar.theme-toggle/>
+
+            <!-- User image -->
+            {{--<x-navbar.item user id="user" text="Open user menu">
+                <x-icon.user class="h-8 w-8 hover:bg-gray-700 hover:dark:bg-gray-300"/>
+
+                <x-slot:subitems>
+                    <x-navbar.subitem href="#">
+
+                    </x-navbar.subitem>
+                </x-slot:subitems>
+            </x-navbar.item>--}}
 
             <!-- User image -->
             <button type="button" data-dropdown-toggle="dropdown-user" class="mx-3 flex rounded-full text-sm focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 md:mr-0">
