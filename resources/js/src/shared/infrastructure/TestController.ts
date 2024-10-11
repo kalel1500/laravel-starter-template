@@ -6,46 +6,11 @@ import Dom from '../Domain/Dom';
 
 export default class TestController
 {
-    compare()
-    {
-        // Fragmentos HTML A y B para comparar
-        const htmlA = `
-<ul id="dropdown-pages" class="hidden py-2 space-y-2">
-    <li>
-        <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Settings</a>
-    </li>
-    <li>
-        <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Kanban</a>
-    </li>
-    <li>
-        <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Calendar</a>
-    </li>
-</ul>
-`;
-
-        const htmlB = `
-<ul id="dropdown-pages" class="hidden space-y-2 py-2">
-    <li>
-        <a href="#" class="group flex w-full items-center rounded-lg p-2 pl-11 text-base font-medium text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Settings</a>
-    </li>
-    <li>
-        <a href="#" class="group flex w-full items-center rounded-lg p-2 pl-11 text-base font-medium text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Kanban</a>
-    </li>
-    <li>
-        <a href="#" class="group flex w-full items-center rounded-lg p-2 pl-11 text-base font-medium text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Calendar</a>
-    </li>
-</ul>
-`;
-
-        const result = Dom.compareTailwindClassesHTML(htmlA, htmlB);
-        console.log(result);
-    }
-
     test()
     {
-        // console.log('llega');
-        // g.startTooltips();
-        // console.log('continua?');
+        console.log('llega');
+        g.startTooltips();
+        console.log('continua?');
     }
 
     testConstants()

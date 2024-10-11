@@ -28,7 +28,7 @@
         </x-slot:icon>
         Sales
         <x-slot:sublinks id="sales">
-            <x-sidebar.item sublink>Products</x-sidebar.item>
+            <x-sidebar.item sublink href="{{ route('shared.compare') }}">Products</x-sidebar.item>
             <x-sidebar.item sublink>Billing</x-sidebar.item>
             <x-sidebar.item sublink>Invoice</x-sidebar.item>
         </x-slot:sublinks>
