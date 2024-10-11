@@ -28,8 +28,11 @@ export default class Dom
     static compareHTMLElementsStructure(htmlA: string, htmlB: string) {
         // Función auxiliar para obtener los atributos de un elemento como un objeto
         function getAttributesMap(element: Element) {
-            const attributes: Record<any, any> = {};
-            for (const attr of element.attributes) {
+            const attributes: Record<string, string> = {};
+            for (const attr of Array.from(element.attributes)) {
+                // Omitir la propiedad "style"
+                if (attr.name === 'style') continue;
+
                 // Si el atributo es 'class', ordenamos las clases
                 if (attr.name === 'class') {
                     attributes[attr.name] = attr.value.split(' ').sort().join(' ').trim();
@@ -41,7 +44,7 @@ export default class Dom
         }
 
         // Función auxiliar para comparar dos objetos de atributos
-        function compareAttributes(attrsA: Record<any, any>, attrsB: Record<any, any>) {
+        function compareAttributes(attrsA: Record<string, string>, attrsB: Record<string, string>) {
             const keysA = Object.keys(attrsA);
             const keysB = Object.keys(attrsB);
 
