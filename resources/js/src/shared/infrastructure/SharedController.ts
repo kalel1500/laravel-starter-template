@@ -49,24 +49,21 @@ export default class SharedController
         if ($a == null || $b == null || $resultOk == null || $resultNok == null) {
             throw new Error('Alguno de los elementos HTML de la pagina no se ha encontrado.');
         }
-        $btn?.addEventListener('click', e=> {
+        const hideMessages = () => {
             $resultOk.classList.add('hidden');
             $resultNok.classList.add('hidden');
-            const htmlA =$a.value;
-            const htmlB =$b.value;
-            if (Dom.compareTailwindClassesHTML(htmlA, htmlB)) {
+        };
+        $a.addEventListener('focus', hideMessages);
+        $b.addEventListener('focus', hideMessages);
+        $btn?.addEventListener('click', e=> {
+            hideMessages();
+            const htmlA = $a.value;
+            const htmlB = $b.value;
+            if (Dom.compareHTMLElementsStructure(htmlA, htmlB)) {
                 $resultOk.classList.remove('hidden');
             } else {
                 $resultNok.classList.remove('hidden');
             }
-        });
-        $a.addEventListener('focus', e => {
-            $resultOk.classList.add('hidden');
-            $resultNok.classList.add('hidden');
-        });
-        $b.addEventListener('focus', e => {
-            $resultOk.classList.add('hidden');
-            $resultNok.classList.add('hidden');
         });
     }
 }
