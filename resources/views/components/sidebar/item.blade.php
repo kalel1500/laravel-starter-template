@@ -1,4 +1,3 @@
-@use(Illuminate\Support\Facades\Request)
 @props(['icon', 'sublinks', 'counter'])
 
 @php
@@ -8,17 +7,8 @@
     $iconHtml = !isset($icon) ? '' : '<div class="h-6 w-6 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">' . $icon . '</div>';
     $spanClasses = !isset($icon) ? '' : 'ml-3';
     $dropdownId = $isDropdown ? $sublinks->attributes->get('id') : '';
-
-    $currentUrl = Request::fullUrl();
-    $linkIsActive = $currentUrl === $attributes->get('href');
-
-    $dropdownIsOpen = false;
-    if ($isDropdown) {
-        // Expresión regular para encontrar todos los href en los enlaces
-        preg_match_all('/<a\s+href=["\']([^"\']+)["\']/', $sublinks, $matches);
-        $hrefs = $matches[1]; // $matches[1] contiene todos los href encontrados
-        $dropdownIsOpen = in_array($currentUrl, $hrefs); // Comprueba si la URL actual está en la lista
-    }
+    $linkIsActive = isRouteActive($attributes->get('href'));
+    $dropdownIsOpen = $isDropdown && dropdownIsOpen($sublinks->toHtml());
 
     /*
      * Código interesante por si queremos sobreescribir las clases del svg en lugar de envolverlo con un div
