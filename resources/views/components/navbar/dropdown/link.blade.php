@@ -22,6 +22,12 @@
         </div>
         <div class="text-sm text-gray-900 dark:text-white">{{ $text }}</div>
     </a>
+@else
+    <li>
+        <a href="{{ $href }}" class="flex items-center px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+            {{ $slot }}
+        </a>
+    </li>
 @endif
 
 
