@@ -11,6 +11,11 @@ use Throwable;
 
 final class TestController extends Controller
 {
+    public function compare(): View
+    {
+        return view('pages.shared.compare');
+    }
+
     public function test(): View
     {
         return view('pages.shared.test');
