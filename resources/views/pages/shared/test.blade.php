@@ -1,5 +1,7 @@
 <x-layouts.app title="Test">
-    <div class="bg-white dark:bg-gray-800 p-5 rounded dark:text-gray-400 shadow">
+
+    <x-section>
+
         <div>Hola mundo</div>
         <div class="card-header--new">
             <div>card-header--new__div1</div>
@@ -16,5 +18,7 @@
                 data-bs-title="This top tooltip is themed via CSS variables.">
             Custom tooltip
         </button>
-    </div>
+
+    </x-section>
+
 </x-layouts.app>
