@@ -58,7 +58,7 @@
                 <div class="block bg-gray-50 px-4 py-2 text-center text-base font-medium text-gray-700 dark:bg-gray-600 dark:text-gray-300">
                     Notifications
                 </div>
-                <div>
+                <div class>
                     <a href="#" class="flex border-b px-4 py-3 hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-600">
                         <div class="flex-shrink-0 h-11 w-11">
                             <div class="bg-gray-800 dark:bg-white rounded-full">
