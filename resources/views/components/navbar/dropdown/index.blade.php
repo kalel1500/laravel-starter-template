@@ -23,9 +23,16 @@
         </div>
     @endif
 
-    <div @class(['grid grid-cols-3 gap-4 p-4' => $isSquare])>
-        {{ $slot }}
-    </div>
+    @if($isBig)
+        <div @class(['grid grid-cols-3 gap-4 p-4' => $isSquare])>
+            {{ $slot }}
+        </div>
+    @else
+        <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
+            {{ $slot }}
+        </ul>
+    @endif
+
 
     @if($isBig && isset($footer))
         <a href="{{ $footer->attributes->get('href') ?? '#' }}" class="text-md block bg-gray-50 py-2 text-center font-medium text-gray-900 hover:bg-gray-100 dark:bg-gray-600 dark:text-white dark:hover:underline">
