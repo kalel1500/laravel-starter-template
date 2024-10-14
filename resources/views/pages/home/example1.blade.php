@@ -1,4 +1,4 @@
-<x-layouts.app title="Example 2">
+<x-layout.app title="Example 2">
 
     <x-slot:breadcrumb>
         <x-breadcrumb>
@@ -115,4 +115,4 @@
 
     </div>
 
-</x-layouts.app>
+</x-layout.app>

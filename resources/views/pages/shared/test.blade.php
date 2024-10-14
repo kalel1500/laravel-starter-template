@@ -1,4 +1,4 @@
-<x-layouts.app title="Test">
+<x-layout.app title="Test">
 
     <x-section>
 
@@ -21,4 +21,4 @@
 
     </x-section>
 
-</x-layouts.app>
+</x-layout.app>
