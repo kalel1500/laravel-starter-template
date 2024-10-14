@@ -1,4 +1,4 @@
-<x-layouts.app title="Example 1">
+<x-layout.app title="Example 1">
 
     <x-slot:breadcrumb>
         <x-breadcrumb place="end">
@@ -34,4 +34,4 @@
         <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"></div>
     </div>
 
-</x-layouts.app>
+</x-layout.app>

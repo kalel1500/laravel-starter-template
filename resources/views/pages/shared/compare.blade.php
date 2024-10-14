@@ -1,4 +1,4 @@
-<x-layouts.app title="Test">
+<x-layout.app title="Test">
     <x-section>
         <h1 class="mb-5 text-3xl font-bold dark:text-white">Comparar HTML</h1>
         <div class="flex items-center justify-center gap-10">
@@ -15,4 +15,4 @@
             </x-card>
         </div>
     </x-section>
-</x-layouts.app>
+</x-layout.app>
