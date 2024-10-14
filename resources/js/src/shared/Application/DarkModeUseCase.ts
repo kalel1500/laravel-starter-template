@@ -6,60 +6,62 @@ export default class DarkModeUseCase extends Instantiable
     {
         const $document = document.documentElement;
 
+        // Función generalizada para cambiar clases y almacenar en localStorage
+        const setState = (key: string, className: string, isActive: boolean) => {
+            $document.classList.toggle(className, isActive);
+            localStorage.setItem(key, isActive ? 'true' : 'false');
+        };
+
+        // Comprobar y aplicar estado inicial desde localStorage
+        const initializeState = (key: string, className: string, prefersCondition: boolean, callback: Function | null = null) => {
+            const savedState = localStorage.getItem(key);
+            const isActive = savedState === 'true' || (!savedState && prefersCondition);
+            setState(key, className, isActive);
+            if (callback) callback(isActive);  // Ejecutar callback si se pasa uno
+            return isActive;
+        };
+
         /* --- Dark mode ---*/
 
+        // Inicialización del tema oscuro
         const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
         const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
         const themeToggleBtn = document.getElementById('theme-toggle');
 
-        // Función para cambiar el tema
-        const setTheme = (theme: string) => {
-            const isDark = theme === 'dark';
-            $document.classList.toggle('dark', isDark);
+        // Función para cambiar el tema y alternar íconos
+        const setTheme = (isDark: boolean) => {
+            setState('dark-theme', 'dark', isDark);
             themeToggleDarkIcon?.classList.toggle('hidden', isDark);
             themeToggleLightIcon?.classList.toggle('hidden', !isDark);
-            localStorage.setItem('color-theme', theme);
         };
 
-        // Comprobar tema inicial
-        const savedTheme = localStorage.getItem('color-theme');
+        // Aplicar estado inicial del tema oscuro
         const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-            setTheme('dark');
-        } else {
-            setTheme('light');
-        }
+        initializeState('dark-theme', 'dark', systemPrefersDark, setTheme);
 
         // Evento de click para alternar el tema
         themeToggleBtn?.addEventListener('click', () => {
-            const currentTheme = $document.classList.contains('dark') ? 'light' : 'dark';
-            setTheme(currentTheme);
+            const isDark = !$document.classList.contains('dark');
+            setTheme(isDark);
         });
 
         /* --- Sidebar status ---*/
+
+        // Inicialización del estado del sidebar
         const sidebarToggleBtn = document.getElementById('sidebar-toggle');
 
         // Función para cambiar el estado del sidebar
-        const setSidebar = (sidebar: string) => {
-            const isCollapsed = sidebar === 'collapsed';
-            $document.classList.toggle('sc', isCollapsed);
-            localStorage.setItem('sidebar-state', sidebar);
+        const setSidebar = (isCollapsed: boolean) => {
+            setState('sidebar-collapsed', 'sc', isCollapsed);
         };
 
-        // Comprobar tema inicial
-        const savedSidebar = localStorage.getItem('sidebar-state');
+        // Aplicar estado inicial del sidebar
+        initializeState('sidebar-collapsed', 'sc', false);
 
-        if (savedSidebar === 'collapsed') {
-            setSidebar('collapsed');
-        } else {
-            setSidebar('expanded');
-        }
-
-        // Evento de click para alternar el tema
+        // Evento de click para alternar el estado del sidebar
         sidebarToggleBtn?.addEventListener('click', () => {
-            const currentTheme = $document.classList.contains('sc') ? 'expanded' : 'collapsed';
-            setSidebar(currentTheme);
+            const isCollapsed = !$document.classList.contains('sc');
+            setSidebar(isCollapsed);
         });
 
     }
