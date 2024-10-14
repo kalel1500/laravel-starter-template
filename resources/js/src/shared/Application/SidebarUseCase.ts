@@ -16,8 +16,8 @@ export default class SidebarUseCase extends Instantiable
             }
         });
 
-        let isCollapsed = false;
-        const toggleSidebar = document.getElementById('toggleSidebar');
+        /*let isCollapsed = false;
+        const toggleSidebar = document.getElementById('sidebar-toggle');
         if (toggleSidebar === null) return;
         toggleSidebar.addEventListener('click', () => {
             console.log('toggleSidebar', isCollapsed);
@@ -30,6 +30,6 @@ export default class SidebarUseCase extends Instantiable
             }
 
 
-        });
+        });*/
     }
 }
