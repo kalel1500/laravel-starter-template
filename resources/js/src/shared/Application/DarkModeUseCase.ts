@@ -9,42 +9,29 @@ export default class DarkModeUseCase extends Instantiable
         const themeToggleBtn = document.getElementById('theme-toggle');
         const $document = document.documentElement;
 
-        // Add the "dark" class to the page and change the icons inside the button according to the previous settings
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            $document.classList.add('dark');
-            themeToggleLightIcon?.classList.remove('hidden');
+        // Función para cambiar el tema
+        const setTheme = (theme: string) => {
+            const isDark = theme === 'dark';
+            $document.classList.toggle('dark', isDark);
+            themeToggleDarkIcon?.classList.toggle('hidden', isDark);
+            themeToggleLightIcon?.classList.toggle('hidden', !isDark);
+            localStorage.setItem('color-theme', theme);
+        };
+
+        // Comprobar tema inicial
+        const savedTheme = localStorage.getItem('color-theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            setTheme('dark');
         } else {
-            $document.classList.remove('dark');
-            themeToggleDarkIcon?.classList.remove('hidden');
+            setTheme('light');
         }
 
-        themeToggleBtn?.addEventListener('click', function() {
-
-            // toggle icons inside button
-            themeToggleDarkIcon?.classList.toggle('hidden');
-            themeToggleLightIcon?.classList.toggle('hidden');
-
-            // if set via local storage previously
-            if (localStorage.getItem('color-theme')) {
-                if (localStorage.getItem('color-theme') === 'light') {
-                    $document.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                } else {
-                    $document.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                }
-
-                // if NOT set via local storage previously
-            } else {
-                if ($document.classList.contains('dark')) {
-                    $document.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                } else {
-                    $document.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                }
-            }
-
+        // Evento de click para alternar el tema
+        themeToggleBtn?.addEventListener('click', () => {
+            const currentTheme = $document.classList.contains('dark') ? 'light' : 'dark';
+            setTheme(currentTheme);
         });
     }
 }
