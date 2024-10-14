@@ -1,11 +1,26 @@
 import Instantiable from '../Domain/Instantiable';
 import { route } from 'ziggy-js';
+import { _const } from '../../../app/constants';
 
 export default class DarkModeUseCase extends Instantiable
 {
     __invoke()
     {
         const $document = document.documentElement;
+        const VERSION = _const('VITE_APP_STORAGE_VERSION');  // Cambia este valor para invalidar el localStorage
+        const VERSION_KEY = 'config-version';
+
+        // Función para invalidar localStorage si cambia la versión
+        const checkAndUpdateVersion = () => {
+            const savedVersion = localStorage.getItem(VERSION_KEY);
+            if (savedVersion !== VERSION) {
+                localStorage.clear();
+                localStorage.setItem(VERSION_KEY, VERSION);
+            }
+        };
+
+        // Llama a la función para validar la versión
+        checkAndUpdateVersion();
 
         // Función generalizada para cambiar clases y almacenar en localStorage
         const setState = (key: string, className: string, isActive: boolean) => {

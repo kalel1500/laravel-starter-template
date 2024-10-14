@@ -9,6 +9,7 @@ declare global {
             readonly VITE_REVERB_SCHEME: string
             readonly VITE_APP_NAME: string
             readonly VITE_APP_ENV: string
+            readonly VITE_APP_STORAGE_VERSION: string
         };
     }
 }
