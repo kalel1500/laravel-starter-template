@@ -1,6 +1,6 @@
 import DarkModeUseCase from '../Application/DarkModeUseCase';
 import SidebarUseCase from '../Application/SidebarUseCase';
-import Dom from '../Domain/Dom';
+import Html from '../Domain/Html';
 
 export default class SharedController
 {
@@ -59,7 +59,7 @@ export default class SharedController
             hideMessages();
             const htmlA = $a.value;
             const htmlB = $b.value;
-            if (Dom.compareHTMLElementsStructure(htmlA, htmlB)) {
+            if (Html.compareHTMLElementsStructure(htmlA, htmlB)) {
                 $resultOk.classList.remove('hidden');
             } else {
                 $resultNok.classList.remove('hidden');
