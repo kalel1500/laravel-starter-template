@@ -31,7 +31,7 @@
         <x-sidebar.full/>
 
         <!-- Wrapper -->
-        <div class="h-auto p-4 pt-20 md:ml-64">
+        <div class="h-auto p-4 pt-20 md:ml-64 md:sc:ml-20 md:transition-all">
 
             <!-- Main -->
             @php($mainClass = config('hexagonal.blade_show_main_border') ? 'border-2 border-dashed border-gray-300 p-2 dark:border-gray-600' : null)
