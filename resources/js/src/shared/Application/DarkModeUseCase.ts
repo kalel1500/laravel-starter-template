@@ -16,7 +16,16 @@ export default class DarkModeUseCase extends Instantiable
         // Comprobar y aplicar estado inicial desde localStorage
         const initializeState = (key: string, className: string, prefersCondition: boolean, callback: Function | null = null) => {
             const savedState = localStorage.getItem(key);
-            const isActive = savedState === 'true' || (!savedState && prefersCondition);
+            let isActive;
+            // Si hay un estado guardado en localStorage, lo usamos
+            if (savedState !== null) {
+                isActive = savedState === 'true';
+                setState(key, className, isActive);
+            } else {
+                // Si no hay estado guardado, prevalece la clase existente en el HTML
+                isActive = $document.classList.contains(className) || prefersCondition;
+            }
+
             setState(key, className, isActive);
             if (callback) callback(isActive);  // Ejecutar callback si se pasa uno
             return isActive;

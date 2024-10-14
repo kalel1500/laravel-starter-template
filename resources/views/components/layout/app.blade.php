@@ -1,7 +1,5 @@
-@props(['title' => config('app.name')])
-
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @if($sidebarCollapsed) class="sc" @endif>
     <head>
         <!-- Meta tags -->
         <meta charset="UTF-8">
