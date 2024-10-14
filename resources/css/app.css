@@ -13,16 +13,16 @@
 /*----- Sidebar scroller -----*/
 
 .scroller {
-    --scrollbar-color-thumb: #9d9d9d;
-    --scrollbar-color-track: #dfdfdf;
+    --scrollbar-color-thumb: #9d9d9d; /*#9d9d9d*/
+    --scrollbar-color-track: transparent; /*#dfdfdf*/
     --scrollbar-width: thin;
-    --scrollbar-width-legacy: 10px;
+    --scrollbar-width-legacy: 5px;
 }
 
 /* Modern browsers with `scrollbar-*` support */
 @supports (scrollbar-width: auto) {
     .scroller {
-        /*scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);*/
+        scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
         scrollbar-width: var(--scrollbar-width);
     }
 }
