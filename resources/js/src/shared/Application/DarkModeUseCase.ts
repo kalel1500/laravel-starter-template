@@ -1,4 +1,5 @@
 import Instantiable from '../Domain/Instantiable';
+import { route } from 'ziggy-js';
 
 export default class DarkModeUseCase extends Instantiable
 {
@@ -47,16 +48,24 @@ export default class DarkModeUseCase extends Instantiable
 
         /* --- Sidebar status ---*/
 
+        // Clave personalizada para almacenar el estado del sidebar según la ruta actual
+        const getSidebarKey = (routeName: string | undefined) => `sidebar-collapsed-${routeName}`;
+
         // Inicialización del estado del sidebar
         const sidebarToggleBtn = document.getElementById('sidebar-toggle');
 
+        // Obtener el nombre de la ruta actual usando Ziggy
+        const currentRoute = route().current();
+
         // Función para cambiar el estado del sidebar
         const setSidebar = (isCollapsed: boolean) => {
-            setState('sidebar-collapsed', 'sc', isCollapsed);
+            const sidebarKey = getSidebarKey(currentRoute);
+            setState(sidebarKey, 'sc', isCollapsed);
         };
 
-        // Aplicar estado inicial del sidebar
-        initializeState('sidebar-collapsed', 'sc', false);
+        // Aplicar estado inicial del sidebar para la ruta actual
+        const sidebarKey = getSidebarKey(currentRoute);
+        initializeState(sidebarKey, 'sc', false);
 
         // Evento de click para alternar el estado del sidebar
         sidebarToggleBtn?.addEventListener('click', () => {
