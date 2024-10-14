@@ -5,7 +5,7 @@ return [
         [
             'icon'         => '<svg aria-hidden="true" class="" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>',
             'text'         => 'Overview',
-            'href'         => '#',
+            'route_name'   => '#',
             'is_separator' => false,
             'is_bottom'    => false,
             'sub_links'    => null,
@@ -13,28 +13,31 @@ return [
         [
             'icon'         => '',
             'text'         => 'Pages',
-            'href'         => '#',
+            'route_name'   => '#',
             'is_separator' => false,
             'is_bottom'    => false,
             'sub_links'    => [
                 [
-                    'text'         => 'Settings',
-                    'href'         => '#',
+                    'text'          => 'Settings',
+                    'route_name'    => 'home.example1',
+                    'collapsed'     => false,
                 ],
                 [
-                    'text'         => 'Kanban',
-                    'href'         => '#',
+                    'text'          => 'Kanban',
+                    'route_name'    => 'home.example2',
+                    'collapsed'     => false,
                 ],
                 [
                     'text'         => 'Calendar',
-                    'href'         => '#',
+                    'route_name'   => 'home.example3',
+                    'collapsed'     => false,
                 ],
             ],
         ],
         [
             'icon'         => '',
             'text'         => 'Sales',
-            'href'         => '#',
+            'route_name'   => '#',
             'is_separator' => false,
             'is_bottom'    => false,
             'sub_links'    => null,
@@ -42,7 +45,7 @@ return [
         [
             'icon'         => '',
             'text'         => 'Messages',
-            'href'         => '#',
+            'route_name'   => '#',
             'is_separator' => false,
             'is_bottom'    => false,
             'sub_links'    => null,
@@ -50,7 +53,7 @@ return [
         [
             'icon'         => '',
             'text'         => 'Authentication',
-            'href'         => '#',
+            'route_name'   => '#',
             'is_separator' => false,
             'is_bottom'    => false,
             'sub_links'    => null,
@@ -63,7 +66,7 @@ return [
         [
             'icon'         => null,
             'text'         => 'Docs',
-            'href'         => '#',
+            'route_name'   => '#',
             'is_separator' => false,
             'is_bottom'    => false,
             'sub_links'    => null,
@@ -71,7 +74,7 @@ return [
         [
             'icon'         => null,
             'text'         => 'Components',
-            'href'         => '#',
+            'route_name'   => '#',
             'is_separator' => false,
             'is_bottom'    => false,
             'sub_links'    => null,
@@ -79,7 +82,7 @@ return [
         [
             'icon'         => null,
             'text'         => 'Help',
-            'href'         => '#',
+            'route_name'   => '#',
             'is_separator' => false,
             'is_bottom'    => false,
             'sub_links'    => null,
