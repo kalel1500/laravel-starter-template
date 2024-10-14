@@ -1,6 +1,7 @@
 import { Constants, DefaultConstants } from 'laravel-ts-utilities';
 
 interface AppConstants extends DefaultConstants {
+    VITE_APP_STORAGE_VERSION: string;
     anotherSetting: string;
 }
 
@@ -16,6 +17,7 @@ constants.extend({
     VITE_BROADCASTING_ENABLED:  import.meta.env.VITE_BROADCASTING_ENABLED === 'true',
     VITE_APP_ENV:               import.meta.env.VITE_APP_ENV,
     VITE_APP_NAME:              import.meta.env.VITE_APP_NAME,
+    VITE_APP_STORAGE_VERSION:   import.meta.env.VITE_APP_STORAGE_VERSION,
     anotherSetting:             'newCustomValue',
 });
 
