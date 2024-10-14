@@ -2,7 +2,6 @@ import { g, Test } from 'laravel-ts-utilities';
 import { _const } from '../../../app/constants';
 import { __ } from '../../../app/translations';
 import { Collapse, CollapseInterface, CollapseOptions, InstanceOptions } from 'flowbite';
-import Dom from '../Domain/Dom';
 
 export default class TestController
 {
