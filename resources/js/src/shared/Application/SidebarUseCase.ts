@@ -1,5 +1,4 @@
-import Instantiable from '../Domain/Instantiable';
-import Mutation from '../Domain/Mutation';
+import { Instantiable, Mutation } from 'laravel-ts-utilities';
 
 export default class SidebarUseCase extends Instantiable
 {
@@ -15,21 +14,5 @@ export default class SidebarUseCase extends Instantiable
                 console.log('abierto');
             }
         });
-
-        /*let isCollapsed = false;
-        const toggleSidebar = document.getElementById('sidebar-toggle');
-        if (toggleSidebar === null) return;
-        toggleSidebar.addEventListener('click', () => {
-            console.log('toggleSidebar', isCollapsed);
-            if (isCollapsed) {
-                document.documentElement.classList.remove('sc');
-                isCollapsed = false;
-            } else {
-                document.documentElement.classList.add('sc');
-                isCollapsed = true;
-            }
-
-
-        });*/
     }
 }
