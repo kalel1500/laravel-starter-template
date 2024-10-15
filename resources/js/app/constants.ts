@@ -1,7 +1,6 @@
 import { Constants, DefaultConstants } from 'laravel-ts-utilities';
 
 interface AppConstants extends DefaultConstants {
-    VITE_APP_STORAGE_VERSION: string;
     anotherSetting: string;
 }
 

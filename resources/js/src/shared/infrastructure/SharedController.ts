@@ -1,12 +1,10 @@
-import DarkModeUseCase from '../Application/DarkModeUseCase';
 import SidebarUseCase from '../Application/SidebarUseCase';
-import Html from '../Domain/Html';
+import { Html } from 'laravel-ts-utilities';
 
 export default class SharedController
 {
     layout()
     {
-        DarkModeUseCase.new().__invoke();
         SidebarUseCase.new().__invoke();
     }
 
