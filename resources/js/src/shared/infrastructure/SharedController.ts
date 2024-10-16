@@ -1,13 +1,7 @@
-import SidebarUseCase from '../Application/SidebarUseCase';
 import { Html } from 'laravel-ts-utilities';
 
 export default class SharedController
 {
-    layout()
-    {
-        SidebarUseCase.new().__invoke();
-    }
-
     compare()
     {
         // Fragmentos HTML A y B para comparar
