@@ -4,7 +4,7 @@ import { __ } from '../../../app/translations';
 
 export default class TestController
 {
-    test()
+    testJs()
     {
         console.log('llega');
         g.startTooltips();

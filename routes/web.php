@@ -7,7 +7,7 @@ use Src\Shared\Infrastructure\TestController;
 Route::get('/', fn() => redirect()->route('home.example1'));
 
 Route::get('/compare',          [TestController::class, 'compare'])->name('shared.compare');
-Route::get('/test',             [TestController::class, 'test'])->name('shared.test');
+Route::get('/test-js',          [TestController::class, 'testJs'])->name('shared.testJs');
 Route::get('/testJsonErrors',   [TestController::class, 'testJsonErrors']);
 Route::get('/tailwind',         [TestController::class, 'tailwind']);
 Route::get('/testFlash',        [TestController::class, 'testFlash']);
