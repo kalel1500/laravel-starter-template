@@ -16,9 +16,9 @@ final class TestController extends Controller
         return view('pages.shared.compare');
     }
 
-    public function test(): View
+    public function testJs(): View
     {
-        return view('pages.shared.test');
+        return view('pages.shared.test-js');
     }
 
     public function testJsonErrors(Request $request)
