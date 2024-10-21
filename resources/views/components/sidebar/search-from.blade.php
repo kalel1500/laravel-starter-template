@@ -1,4 +1,6 @@
-<form action="#" method="GET" class="mb-2 md:hidden">
+@props(['action' => '#'])
+
+<form action="{{ $action }}" method="GET" class="mb-2 md:hidden">
     <label for="sidebar-search" class="sr-only">Search</label>
     <div class="relative">
         <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
