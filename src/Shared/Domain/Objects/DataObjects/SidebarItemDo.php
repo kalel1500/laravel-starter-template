@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Src\Shared\Domain\Objects\DataObjects;
 
-use Src\Shared\Domain\Objects\Collections\SidebarLinkCollection;
+use Src\Shared\Domain\Objects\Collections\SidebarItemCollection;
 use Thehouseofel\Hexagonal\Domain\Objects\DataObjects\ContractDataObject;
 
-final class SidebarLinkDo extends ContractDataObject
+final class SidebarItemDo extends ContractDataObject
 {
     public $code;
     public $icon;
@@ -17,11 +17,11 @@ final class SidebarLinkDo extends ContractDataObject
     public $collapsed;
     public $counter_action;
     public $is_separator;
-    public $sub_links;
+    public $dropdown;
 
     private $counter;
     private $hasCounter;
-    private $hasSublinks;
+    private $hasDropdown;
 
     public function __construct(
         ?string                $code,
@@ -32,7 +32,7 @@ final class SidebarLinkDo extends ContractDataObject
         ?string                $counter_action,
         ?bool                  $collapsed,
         ?bool                  $is_separator,
-        ?SidebarLinkCollection $sub_links,
+        ?SidebarItemCollection $dropdown,
     )
     {
         $this->code             = $code;
@@ -43,10 +43,10 @@ final class SidebarLinkDo extends ContractDataObject
         $this->counter_action   = $counter_action;
         $this->collapsed        = $collapsed;
         $this->is_separator     = $is_separator;
-        $this->sub_links        = $sub_links;
+        $this->dropdown         = $dropdown;
 
         $this->hasCounter       = !is_null($counter_action);
-        $this->hasSublinks      = $this->sub_links->countInt()->isBiggerThan(0);
+        $this->hasDropdown      = $this->dropdown->countInt()->isBiggerThan(0);
     }
 
     protected static function createFromArray(array $data): self
@@ -60,7 +60,7 @@ final class SidebarLinkDo extends ContractDataObject
             counter_action: $data['counter_action'] ?? null,
             collapsed: $data['collapsed'] ?? null,
             is_separator: $data['is_separator'] ?? null,
-            sub_links: SidebarLinkCollection::fromArray($data['sub_links'] ?? null),
+            dropdown: SidebarItemCollection::fromArray($data['dropdown'] ?? null),
         );
     }
 
@@ -89,8 +89,8 @@ final class SidebarLinkDo extends ContractDataObject
         $this->counter = $counter;
     }
 
-    public function hasSubLinks(): bool
+    public function hasDropdown(): bool
     {
-        return $this->hasSublinks;
+        return $this->hasDropdown;
     }
 }
