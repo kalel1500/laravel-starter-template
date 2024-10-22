@@ -1,14 +1,14 @@
-@props(['icon', 'sublinks', 'counter'])
+@props(['icon', 'dropdown', 'counter'])
 
 @php
-    $isDropdown = isset($sublinks);
-    $isSublink = $attributes->has('sublink');
+    $isDropdown = isset($dropdown);
+    $isSubitem = $attributes->has('subitem');
     $linkClasses = 'group flex w-full items-center rounded-lg p-2 text-base font-medium text-gray-900 transition duration-75 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 md:sc:p-1 md:sc:flex-col md:sc:text-xs md:sc:font-light md:transition-all ';
     $iconHtml = !isset($icon) ? '' : '<div class="h-6 w-6 flex-shrink-0 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white">' . $icon . '</div>';
     $spanClasses = !isset($icon) ? '' : 'ml-3 md:sc:ml-0';
-    $dropdownId = $isDropdown ? $sublinks->attributes->get('id') : '';
+    $dropdownId = $isDropdown ? $dropdown->attributes->get('id') : '';
     $linkIsActive = isRouteActive($attributes->get('href'));
-    $dropdownIsOpen = $isDropdown && dropdownIsOpen($sublinks->toHtml());
+    $dropdownIsOpen = $isDropdown && dropdownIsOpen($dropdown->toHtml());
 
     /*
      * Código interesante por si queremos sobreescribir las clases del svg en lugar de envolverlo con un div
@@ -28,11 +28,11 @@
         </button>
 
         <ul id="dropdown-{{ $dropdownId }}" @class(['space-y-2 py-2', 'hidden' => !$dropdownIsOpen])>
-            {{ $sublinks }}
+            {{ $dropdown }}
         </ul>
     @else
-        <a {{ $attributes->only('href')->merge(['href' => '#']) }} @class([$linkClasses, 'bg-gray-100 dark:bg-gray-700' => $linkIsActive, 'pl-11' => $isSublink])>
-            @if ($isSublink)
+        <a {{ $attributes->only('href')->merge(['href' => '#']) }} @class([$linkClasses, 'bg-gray-100 dark:bg-gray-700' => $linkIsActive, 'pl-11' => $isSubitem])>
+            @if ($isSubitem)
                 {{ $slot }}
             @else
                 {!! $iconHtml !!}

@@ -1,5 +1,5 @@
-@php /** @var Src\Shared\Domain\Objects\DataObjects\SidebarLinkDo $link */ @endphp
-@php /** @var Src\Shared\Domain\Objects\DataObjects\SidebarLinkDo $subLink */ @endphp
+@php /** @var Src\Shared\Domain\Objects\DataObjects\SidebarItemDo $item */ @endphp
+@php /** @var Src\Shared\Domain\Objects\DataObjects\SidebarItemDo $subItem */ @endphp
 
 <x-sidebar>
     @if($showSearch)
@@ -8,50 +8,50 @@
         </x-slot:header>
     @endif
 
-    @foreach($links as $link)
-        @if($link->is_separator)
+    @foreach($items as $item)
+        @if($item->is_separator)
             <x-sidebar.separator/>
         @else
             <x-sidebar.item
-                :href="$link->hasSubLinks() ? null : $link->getHref()"
-                :counter="$link->hasCounter() ? $link->getCounter() : null"
+                :href="$item->hasDropdown() ? null : $item->getHref()"
+                :counter="$item->hasCounter() ? $item->getCounter() : null"
             >
-                @if(!is_null($link->icon))
+                @if(!is_null($item->icon))
                     <x-slot:icon>
-                        {!! $link->icon !!}
+                        {!! $item->icon !!}
                     </x-slot:icon>
                 @endif
-                {{ $link->text }}
-                @if($link->hasSubLinks())
-                    <x-slot:sublinks :id="$link->getCode()">
-                        @foreach($link->sub_links as $subLink)
-                            <x-sidebar.item sublink :href="$subLink->getHref()">{{ $subLink->text }}</x-sidebar.item>
+                {{ $item->text }}
+                @if($item->hasDropdown())
+                    <x-slot:dropdown :id="$item->getCode()">
+                        @foreach($item->dropdown as $subItem)
+                            <x-sidebar.item subitem :href="$subItem->getHref()">{{ $subItem->text }}</x-sidebar.item>
                         @endforeach
-                    </x-slot:sublinks>
+                    </x-slot:dropdown>
                 @endif
             </x-sidebar.item>
         @endif
     @endforeach
 
-    @if($hasBottomLinks)
+    @if($hasFooter)
         <x-slot:footer>
             <x-sidebar.footer>
-                @foreach($bottomLinks as $link)
+                @foreach($footer as $item)
                     <x-sidebar.footer.item
-                        :href="$link->hasSubLinks() ? null : $link->getHref()"
-                        :id="$link->code ?? null"
-                        :tooltip="$link->tooltip ?? null"
+                        :href="$item->hasDropdown() ? null : $item->getHref()"
+                        :id="$item->code ?? null"
+                        :tooltip="$item->tooltip ?? null"
                     >
-                        {!! $link->icon !!}
-                        @if($link->hasSubLinks())
-                            <x-slot:subitems>
-                                @foreach($link->sub_links as $subLink)
+                        {!! $item->icon !!}
+                        @if($item->hasDropdown())
+                            <x-slot:dropdown>
+                                @foreach($item->dropdown as $subItem)
                                     <x-sidebar.footer.subitem>
-                                        {!! $subLink->icon !!}
-                                        {{ $subLink->text }}
+                                        {!! $subItem->icon !!}
+                                        {{ $subItem->text }}
                                     </x-sidebar.footer.subitem>
                                 @endforeach
-                            </x-slot:subitems>
+                            </x-slot:dropdown>
                         @endif
                     </x-sidebar.footer.item>
                 @endforeach

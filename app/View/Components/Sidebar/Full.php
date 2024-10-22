@@ -5,17 +5,17 @@ namespace App\View\Components\Sidebar;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
-use Src\Shared\Domain\Objects\Collections\SidebarLinkCollection;
-use Src\Shared\Domain\Objects\DataObjects\SidebarLinkDo;
+use Src\Shared\Domain\Objects\Collections\SidebarItemCollection;
+use Src\Shared\Domain\Objects\DataObjects\SidebarItemDo;
 use Src\Shared\Infrastructure\Facades\LayoutService;
 
 class Full extends Component
 {
     public $showSearch;
     public $searchAction;
-    public $links;
-    public $hasBottomLinks;
-    public $bottomLinks;
+    public $items;
+    public $hasFooter;
+    public $footer;
 
     /**
      * Create a new component instance.
@@ -24,15 +24,15 @@ class Full extends Component
     {
         $this->showSearch = config('template.sidebar.search.show');
         $this->searchAction = getUrlFromRoute(config('template.sidebar.search.route'));
-        $this->links = SidebarLinkCollection::fromArray(config('template.sidebar.links'));
-        $this->bottomLinks = SidebarLinkCollection::fromArray(config('template.sidebar.bottom_links'));
-        $this->hasBottomLinks = $this->bottomLinks->countInt()->isBiggerThan(0);
+        $this->items = SidebarItemCollection::fromArray(config('template.sidebar.items'));
+        $this->footer = SidebarItemCollection::fromArray(config('template.sidebar.footer'));
+        $this->hasFooter = $this->footer->countInt()->isBiggerThan(0);
 
-        $this->links = $this->links->map(function (SidebarLinkDo $link) {
-            if (!is_null($action = $link->counter_action)) {
-                $link->setCounter(LayoutService::$action());
+        $this->items = $this->items->map(function (SidebarItemDo $item) {
+            if (!is_null($action = $item->counter_action)) {
+                $item->setCounter(LayoutService::$action());
             }
-            return $link;
+            return $item;
         });
     }
 
