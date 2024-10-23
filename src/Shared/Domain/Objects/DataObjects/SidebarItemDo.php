@@ -5,9 +5,8 @@ declare(strict_types=1);
 namespace Src\Shared\Domain\Objects\DataObjects;
 
 use Src\Shared\Domain\Objects\Collections\SidebarItemCollection;
-use Thehouseofel\Hexagonal\Domain\Objects\DataObjects\ContractDataObject;
 
-final class SidebarItemDo extends ContractDataObject
+final class SidebarItemDo extends NavigationItem
 {
     public $code;
     public $icon;
@@ -19,9 +18,9 @@ final class SidebarItemDo extends ContractDataObject
     public $is_separator;
     public $dropdown;
 
-    private $counter;
-    private $hasCounter;
-    private $hasDropdown;
+    protected $counter;
+    protected $hasCounter;
+    protected $hasDropdown;
 
     public function __construct(
         ?string                $code,
@@ -46,7 +45,7 @@ final class SidebarItemDo extends ContractDataObject
         $this->dropdown         = $dropdown;
 
         $this->hasCounter       = !is_null($counter_action);
-        $this->hasDropdown      = $this->dropdown->countInt()->isBiggerThan(0);
+        $this->hasDropdown      = !is_null($dropdown);
     }
 
     protected static function createFromArray(array $data): self
@@ -64,16 +63,6 @@ final class SidebarItemDo extends ContractDataObject
         );
     }
 
-    public function getCode(): string
-    {
-        return $this->code ?? strToSlug($this->text);
-    }
-
-    public function getHref(): string
-    {
-        return getUrlFromRoute($this->route_name);
-    }
-
     public function hasCounter(): bool
     {
         return $this->hasCounter;
@@ -87,10 +76,5 @@ final class SidebarItemDo extends ContractDataObject
     public function setCounter($counter): void
     {
         $this->counter = $counter;
-    }
-
-    public function hasDropdown(): bool
-    {
-        return $this->hasDropdown;
     }
 }
