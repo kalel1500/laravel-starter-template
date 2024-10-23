@@ -23,27 +23,27 @@
 
                     <x-navbar.dropdown.link time="a few moments ago" href="#">
                         <x-slot:icon><x-icon.user/></x-slot:icon>
-                        New message from <x-text.semibold>Bonnie Green</x-text.semibold>: "Hey, what's up? All set for the presentation?"
+                        New message from Bonnie Green: "Hey, what's up? All set for the presentation?"
                     </x-navbar.dropdown.link>
 
                     <x-navbar.dropdown.link time="10 minutes ago" href="#">
                         <x-slot:icon><x-icon.user/></x-slot:icon>
-                        <x-text.semibold>Jese leos</x-text.semibold> and <x-text.semibold>5 others</x-text.semibold> started following you.
+                        Jese leos and 5 others started following you.
                     </x-navbar.dropdown.link>
 
                     <x-navbar.dropdown.link time="44 minutes ago" href="#">
                         <x-slot:icon><x-icon.user/></x-slot:icon>
-                        <x-text.semibold>Joseph Mcfall</x-text.semibold> and <x-text.semibold>141 others</x-text.semibold> love your story. See it and view more stories.
+                        Joseph Mcfall and 141 others love your story. See it and view more stories.
                     </x-navbar.dropdown.link>
 
                     <x-navbar.dropdown.link time="1 hour ago" href="#">
                         <x-slot:icon><x-icon.user/></x-slot:icon>
-                        <x-text.semibold>Leslie Livingston</x-text.semibold> mentioned you in a comment: <span class="text-blue-600 dark:text-blue-500 font-medium">@bonnie.green</span> what do you say?
+                        Leslie Livingston mentioned you in a comment: @bonnie.green what do you say?
                     </x-navbar.dropdown.link>
 
                     <x-navbar.dropdown.link time="3 hours ago" href="#">
                         <x-slot:icon><x-icon.user/></x-slot:icon>
-                        <x-text.semibold>Robert Brown</x-text.semibold> posted a new video: Glassmorphism - learn how to implement the new design trend.
+                        Robert Brown posted a new video: Glassmorphism - learn how to implement the new design trend.
                     </x-navbar.dropdown.link>
 
                     <x-slot:footer href="#">
