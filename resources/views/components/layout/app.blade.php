@@ -24,6 +24,7 @@
 
         <!-- Navbar -->
         <x-navbar.full/>
+{{--        <x-navbar.full-old/>--}}
 
         <!-- Sidebar -->
         <x-sidebar.full/>

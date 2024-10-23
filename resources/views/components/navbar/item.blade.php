@@ -1,10 +1,9 @@
-@props(['dropdown', 'tooltip', 'text', 'user'])
+@props(['dropdown', 'tooltip', 'text', 'user' => false])
 
 @php
     $hasDropdown = isset($dropdown);
     $hasTooltip = isset($tooltip);
-    $isUser     = isset($user);
-    $itemClasses = $isUser
+    $itemClasses = $user
         ? 'mx-3 flex rounded-full text-sm focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 md:mr-0'
         : 'mr-1 rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 focus:ring-4 focus:ring-gray-300 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-600';
 @endphp

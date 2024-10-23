@@ -1,4 +1,4 @@
-<!-- New -->
+<!-- Old -->
 <x-navbar>
     <x-slot:left-side>
         <x-navbar.hamburger-icon/>
@@ -111,6 +111,7 @@
 
         <!-- User image -->
         <x-navbar.item user id="user" text="Open user menu">
+            <!-- User icon -->
             <x-icon.user class="h-8 w-8 hover:bg-gray-700 hover:dark:bg-gray-300"/>
 
             <x-slot:dropdown>

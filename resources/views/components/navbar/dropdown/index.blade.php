@@ -1,9 +1,9 @@
 @aware(['id'])
-@props(['header', 'footer'])
+@props(['header', 'footer', 'bigList' => false, 'bigSquare' => false])
 
 @php
-    $isBig = $attributes->whereStartsWith('big-')->isNotEmpty();
-    $isSquare = $attributes->has('big-square');
+    $isBig = $bigList || $bigSquare;
+    $isSquare = $bigSquare;
 @endphp
 
 <!-- Dropdown {{ $id }} -->
