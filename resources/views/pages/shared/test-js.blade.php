@@ -1,6 +1,6 @@
-<x-layout.app title="Test">
+<x-hexagonal::layout.app title="Test">
 
-    <x-section>
+    <x-hexagonal::section>
 
         <div>Hola mundo</div>
         <div class="card-header--new">
@@ -19,6 +19,6 @@
             Custom tooltip
         </button>
 
-    </x-section>
+    </x-hexagonal::section>
 
-</x-layout.app>
+</x-hexagonal::layout.app>
