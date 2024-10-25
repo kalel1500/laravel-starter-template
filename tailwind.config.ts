@@ -7,7 +7,9 @@ export default {
     "./resources/**/*.js",
     "./resources/**/*.ts",
     "./resources/**/*.vue",
-    "./node_modules/flowbite/**/*.js"
+    "./node_modules/flowbite/**/*.js",
+    "./vendor/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/resources/**/*.js",
+    "./vendor/kalel1500/laravel-hexagonal-and-ddd-architecture-utilities/resources/**/*.blade.php",
   ],
   theme: {
     extend: {
