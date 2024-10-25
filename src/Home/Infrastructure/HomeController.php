@@ -9,6 +9,11 @@ use Thehouseofel\Hexagonal\Infrastructure\Controllers\Controller;
 
 final class HomeController extends Controller
 {
+    public function example0(): View
+    {
+        return view('pages.home.example0');
+    }
+
     public function example1(): View
     {
         return view('pages.home.example1');
