@@ -9,23 +9,8 @@ use Thehouseofel\Hexagonal\Infrastructure\Controllers\Controller;
 
 final class HomeController extends Controller
 {
-    public function example0(): View
+    public function index(): View
     {
-        return view('pages.home.example0');
-    }
-
-    public function example1(): View
-    {
-        return view('pages.home.example1');
-    }
-
-    public function example2(): View
-    {
-        return view('pages.home.example2');
-    }
-
-    public function example3(): View
-    {
-        return view('pages.home.example3');
+        return view('pages.home.index');
     }
 }
