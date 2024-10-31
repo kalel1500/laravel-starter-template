@@ -12,7 +12,6 @@ Delete the last two lines of the `.gitignore` file as they are only there to pre
 composer.lock
 package-lock.json
 ```
-Copy the contents of the `.gitignore.example` file to the `.gitignore` file.
 
 ### 1.2. Install Main packages
 
@@ -103,4 +102,4 @@ Files that change:
 
 ## 3. License
 
-Laravel starter template is open-sourced software licensed under the [GNU General Public License v3.0](LICENSE).
+The Laravel Starter Template is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
