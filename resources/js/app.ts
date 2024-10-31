@@ -2,6 +2,6 @@
 // import './app/bootstrap';
 
 // @ts-ignore
-import.meta.glob([
-    '../images/**',
-]);
+// import.meta.glob([
+//     '../images/**',
+// ]);
