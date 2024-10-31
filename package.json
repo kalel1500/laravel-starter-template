@@ -2,8 +2,8 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "vite",
         "build": "vite build",
+        "dev": "vite",
         "build-check": "tsc && vite build"
     },
     "devDependencies": {
