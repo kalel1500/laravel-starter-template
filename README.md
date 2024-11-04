@@ -59,11 +59,7 @@ By default, the initial front-end (TypeScript and Css) files are not created.
 The package provides a command to create the necessary files
 
 ```bash
-npx laravel-ts-utilities # (create all files)
-# or
-npx laravel-ts-utilities typescript # (only create typescript files)
-# or
-npx laravel-ts-utilities tailwind # (only create tailwind files)
+npx laravel-ts-utilities
 ```
 
 ### 2.4 (artisan) - Api (files are modified)
