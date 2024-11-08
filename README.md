@@ -1,55 +1,50 @@
 # Laravel Starter Template
 
-A Laravel starter template.
+This is a Laravel 11 starter template to quickly start applications with Hexagonal Architecture and DDD
 
-## 1. Steps for preparing the template
+- [**Start the Laravel app**](#start-the-Laravel-app)
+- [**Preparing the Template**](#preparing-the-template)
+    - [Install `laravel-hexagonal-and-ddd-architecture-utilities` package](#install-the-main-package-for-hexagonal-architecture-kalel1500laravel-hexagonal-and-ddd-architecture-utilities)
+    - [Install `laravel-ts-utilities` package](#install-the-second-package-for-build-a-simple-front-laravel-ts-utilities)
+- [**More info from Template packages that may be useful**](#more-info-from-template-packages-that-may-be-useful)
+- [**Laravel Artisan packages explained**](#laravel-artisan-packages-explained)
+- [**License**](#license)
 
-### 1.1. Fix .gitignore file
+## Start the Laravel app
 
-Delete the last two lines of the `.gitignore` file as they are only there to prevent the package manager lock files from being saved in the template.
-```gitignore
-# delete
-composer.lock
-package-lock.json
-```
+1. To start the Laravel application (`in laravel 11`), simply run the following commands:
+   ```bash
+   composer install
+   npm install
+   npm run build
+   ```
+2. Then you need to copy the `.env.example` file to a new `.env` file
+3. And finally you have to launch the command:
+   ```bash
+    php artisan key:generate
+   ```
 
-### 1.2. Install Main packages
+## Preparing the Template
 
-| Type        | Name                 | Command                                                                                         |
-|-------------|----------------------|-------------------------------------------------------------------------------------------------|
-| *composer*: | hexagonal            | `composer require kalel1500/laravel-hexagonal-and-ddd-architecture-utilities:@beta`             |
-| *composer*: | ziggy                | `composer require tightenco/ziggy`                                                              |
-| *npm*:      | tailwind css         | `npm install -D tailwindcss postcss autoprefixer`<br/>`npx tailwindcss init -p (don't execute)` |
-| *npm*:      | laravel-ts-utilities | `npm install laravel-ts-utilities`<br/>`npx laravel-ts-utilities`                               |
-| --          | --                   | --                                                                                              |
-| *artisan*:  | api                  | `php artisan install:api`                                                                       |
-| *artisan*:  | broadcasting         | `php artisan install:broadcasting`                                                              |
+### Install the main package for hexagonal architecture (`kalel1500/laravel-hexagonal-and-ddd-architecture-utilities`)
 
-## 2. Package documentation
-
-### 2.1. (composer) - laravel-hexagonal-and-ddd-architecture-utilities
+This is the main package that allows us to easily program with hexagonal architecture and DDD and makes it easy to create the initial files.
 
 ```bash
 composer require kalel1500/laravel-hexagonal-and-ddd-architecture-utilities:@beta
 ```
 
-You must uncomment the package's ExceptionHandler in the `bootstap/app.php` file to enable package error handling.
-```php
-->withExceptions(function (Exceptions $exceptions) {
-    $callback = \Thehouseofel\Hexagonal\Infrastructure\Exceptions\ExceptionHandler::getUsingCallback();
-    $callback($exceptions);
-})
-```
-
-### 2.2 (npm) - tailwindcss
+To create the initial package files you can run the following command:
 
 ```bash
-npm install -D tailwindcss postcss autoprefixer
-# npx tailwindcss init -p # (don't execute)
+php artisan hexagonal:start
 ```
 
-### 2.3 (npm) - laravel-ts-utilities
+### Install the second package for build a simple front (`laravel-ts-utilities`)
 
+If your application will have blade views using vanilla Javascript, the following package can be very useful.
+
+To install the package you can use the following command:
 ```bash
 npm install laravel-ts-utilities
 ```
@@ -62,7 +57,25 @@ The package provides a command to create the necessary files
 npx laravel-ts-utilities
 ```
 
-### 2.4 (artisan) - Api (files are modified)
+## More info from Template packages that may be useful
+
+Here is a list of packages that are interesting to use in this template
+
+| Type            | Name                                   | Command                                                                                            |
+|-----------------|----------------------------------------|----------------------------------------------------------------------------------------------------|
+| *composer*:     | hexagonal                              | `composer require kalel1500/laravel-hexagonal-and-ddd-architecture-utilities:@beta`                |
+| *npm*:          | laravel-ts-utilities                   | `npm install laravel-ts-utilities` && `npx laravel-ts-utilities`                                   |
+| --              | --                                     | --                                                                                                 |
+| ~~*composer*:~~ | ~~ziggy~~ `[already installed]`        | ~~`composer require tightenco/ziggy`~~                                                             |
+| ~~*npm*:~~      | ~~tailwind css~~ `[already installed]` | ~~`npm install -D tailwindcss postcss autoprefixer` && `npx tailwindcss init -p (don't execute)`~~ |
+| --              | --                                     | --                                                                                                 |
+| *artisan*:      | api                                    | `php artisan install:api`                                                                          |
+| *artisan*:      | broadcasting                           | `php artisan install:broadcasting`                                                                 |
+
+
+## Laravel Artisan packages explained
+
+### Api (files are modified)
 
 If your application will also offer a stateless API, you may enable API routing using the install:api Artisan command:
 ```bash
@@ -78,7 +91,7 @@ Files that change:
 /composer.json => "laravel/sanctum",
 ```
 
-### 2.5 (artisan) - Broadcasting (files are modified)
+### Broadcasting (files are modified)
 
 By default, broadcasting is not enabled in new Laravel applications. You may enable broadcasting using the install:broadcasting Artisan command:
 ```bash
@@ -96,6 +109,6 @@ Files that change:
 /package.json => "laravel-echo" and "pusher-js",
 ```
 
-## 3. License
+## License
 
 The Laravel Starter Template is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
