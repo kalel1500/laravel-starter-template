@@ -57,6 +57,13 @@ The package provides a command to create the necessary files
 npx laravel-ts-utilities
 ```
 
+After installing the package and bringing all the files, we have to compile again and then clear the views cache (in case the page has been entered before and has been cached without the icon)
+
+```bash
+npm run build
+php artisan view:clear
+```
+
 ## More info from Template packages that may be useful
 
 Here is a list of packages that are interesting to use in this template
