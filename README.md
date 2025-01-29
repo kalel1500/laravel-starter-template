@@ -10,7 +10,7 @@ This is a Laravel 11 starter template to quickly start applications with Hexagon
 - [**Laravel Artisan packages explained**](#laravel-artisan-packages-explained)
 - [**License**](#license)
 
-## Start the Laravel app
+# Start the Laravel app
 
 To start the Laravel application (`in Laravel 11`) simply follow the following steps:
 
@@ -27,9 +27,9 @@ To start the Laravel application (`in Laravel 11`) simply follow the following s
     php artisan migrate:fresh
    ```
 
-## Preparing the Template
+# Preparing the Template
 
-### Install the main package for hexagonal architecture (`kalel1500/laravel-hexagonal-and-ddd-architecture-utilities`)
+## Install the main package for hexagonal architecture (`kalel1500/laravel-hexagonal-and-ddd-architecture-utilities`)
 
 This is the main package that allows us to easily program with hexagonal architecture and DDD and makes it easy to create the initial files.
 
@@ -43,7 +43,7 @@ To create the initial package files you can run the following command:
 php artisan hexagonal:start
 ```
 
-### Install the second package for build a simple front (`@kalel1500/laravel-ts-utils`)
+## Install the second package for build a simple front (`@kalel1500/laravel-ts-utils`)
 
 If your application will have blade views using vanilla Javascript, the following package can be very useful.
 
@@ -67,7 +67,7 @@ npm run build
 php artisan view:clear
 ```
 
-## More info from Template packages that may be useful
+# More info from Template packages that may be useful
 
 Here is a list of packages that are interesting to use in this template
 
@@ -83,9 +83,9 @@ Here is a list of packages that are interesting to use in this template
 | *artisan*:      | broadcasting                           | `php artisan install:broadcasting`                                                                 |
 
 
-## Laravel Artisan packages explained
+# Laravel Artisan packages explained
 
-### Api (files are modified)
+## Api (files are modified)
 
 If your application will also offer a stateless API, you may enable API routing using the install:api Artisan command:
 ```bash
@@ -101,7 +101,7 @@ Files that change:
 /composer.json => "laravel/sanctum",
 ```
 
-### Broadcasting (files are modified)
+## Broadcasting (files are modified)
 
 By default, broadcasting is not enabled in new Laravel applications. You may enable broadcasting using the install:broadcasting Artisan command:
 ```bash
@@ -119,6 +119,6 @@ Files that change:
 /package.json => "laravel-echo" and "pusher-js",
 ```
 
-## License
+# License
 
 The Laravel Starter Template is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
