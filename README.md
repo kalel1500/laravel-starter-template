@@ -29,9 +29,9 @@ To start the Laravel application (`in Laravel 11`) simply follow the following s
 
 # Installs two useful packages
 
-## 1. Backend
+## 1. Backend [`laravel-hexagonal-and-ddd-architecture-utilities`]
 
-### Install the main package for hexagonal architecture [`kalel1500/laravel-hexagonal-and-ddd-architecture-utilities`]
+### Install the main package for hexagonal architecture 
 
 This is the main package that allows us to easily program with hexagonal architecture and DDD and makes it easy to create the initial files.
 
@@ -56,11 +56,11 @@ php artisan hexagonal:start
 > Therefore, it is not necessary to install the second package. \
 > Otherwise, if you want to use Laravel's blade views, you will need to.
 
-## 2. Frontend (**)
+## 2. Frontend (**) [`laravel-ts-utils`]
 
 > ** It is not necessary if you have executed the command `php artisan hexagonal:start` without the parameter `--simple`
 
-### Install a second package to easily build views [`@kalel1500/laravel-ts-utils`]
+### Install a second package to easily build views
 
 If your application will have blade views using vanilla Javascript, the following package can be very useful.
 
