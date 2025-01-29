@@ -27,9 +27,11 @@ To start the Laravel application (`in Laravel 11`) simply follow the following s
     php artisan migrate:fresh
    ```
 
-# Preparing the Template
+# Installs two useful packages
 
-## Install the main package for hexagonal architecture (`kalel1500/laravel-hexagonal-and-ddd-architecture-utilities`)
+## 1. Backend
+
+### Install the main package for hexagonal architecture [`kalel1500/laravel-hexagonal-and-ddd-architecture-utilities`]
 
 This is the main package that allows us to easily program with hexagonal architecture and DDD and makes it easy to create the initial files.
 
@@ -43,7 +45,9 @@ To create the initial package files you can run the following command:
 php artisan hexagonal:start
 ```
 
-## Install the second package for build a simple front (`@kalel1500/laravel-ts-utils`)
+## 2. Frontend
+
+### Install a second package to easily build views [`@kalel1500/laravel-ts-utils`]
 
 If your application will have blade views using vanilla Javascript, the following package can be very useful.
 
