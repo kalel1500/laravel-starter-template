@@ -5,7 +5,7 @@ This is a Laravel 11 starter template to quickly start applications with Hexagon
 - [**Start the Laravel app**](#start-the-Laravel-app)
 - [**Preparing the Template**](#preparing-the-template)
     - [Install `laravel-hexagonal-and-ddd-architecture-utilities` package](#install-the-main-package-for-hexagonal-architecture-kalel1500laravel-hexagonal-and-ddd-architecture-utilities)
-    - [Install `laravel-ts-utilities` package](#install-the-second-package-for-build-a-simple-front-laravel-ts-utilities)
+    - [Install `@kalel1500/laravel-ts-utils` package](#install-the-second-package-for-build-a-simple-front-kalel1500laravel-ts-utils)
 - [**More info from Template packages that may be useful**](#more-info-from-template-packages-that-may-be-useful)
 - [**Laravel Artisan packages explained**](#laravel-artisan-packages-explained)
 - [**License**](#license)
@@ -43,13 +43,13 @@ To create the initial package files you can run the following command:
 php artisan hexagonal:start
 ```
 
-### Install the second package for build a simple front (`laravel-ts-utilities`)
+### Install the second package for build a simple front (`@kalel1500/laravel-ts-utils`)
 
 If your application will have blade views using vanilla Javascript, the following package can be very useful.
 
 To install the package you can use the following command:
 ```bash
-npm install laravel-ts-utilities
+npm install @kalel1500/laravel-ts-utils
 ```
 
 By default, the initial front-end (TypeScript and Css) files are not created.
@@ -57,7 +57,7 @@ By default, the initial front-end (TypeScript and Css) files are not created.
 The package provides a command to create the necessary files
 
 ```bash
-npx laravel-ts-utilities
+npx @kalel1500/laravel-ts-utils
 ```
 
 After installing the package and bringing all the files, we have to compile again and then clear the views cache (in case the page has been entered before and has been cached without the icon)
@@ -74,7 +74,7 @@ Here is a list of packages that are interesting to use in this template
 | Type            | Name                                   | Command                                                                                            |
 |-----------------|----------------------------------------|----------------------------------------------------------------------------------------------------|
 | *composer*:     | hexagonal                              | `composer require kalel1500/laravel-hexagonal-and-ddd-architecture-utilities:@beta`                |
-| *npm*:          | laravel-ts-utilities                   | `npm install laravel-ts-utilities` && `npx laravel-ts-utilities`                                   |
+| *npm*:          | @kalel1500/laravel-ts-utils            | `npm install @kalel1500/laravel-ts-utils` && `npx @kalel1500/laravel-ts-utils`                     |
 | --              | --                                     | --                                                                                                 |
 | ~~*composer*:~~ | ~~ziggy~~ `[already installed]`        | ~~`composer require tightenco/ziggy`~~                                                             |
 | ~~*npm*:~~      | ~~tailwind css~~ `[already installed]` | ~~`npm install -D tailwindcss postcss autoprefixer` && `npx tailwindcss init -p (don't execute)`~~ |
