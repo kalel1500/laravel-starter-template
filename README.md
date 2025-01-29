@@ -45,7 +45,20 @@ To create the initial package files you can run the following command:
 php artisan hexagonal:start
 ```
 
-## 2. Frontend
+> This command can receive two parameters:\
+> `--reset` (false) \
+> `--simple` (false) \
+> By default the `simple` parameter is `false` and the following commands are automatically launched:
+> ```bash
+> npm install @kalel1500/laravel-ts-utils
+> npx @kalel1500/laravel-ts-utils
+> ```
+> Therefore, it is not necessary to install the second package. \
+> Otherwise, if you want to use Laravel's blade views, you will need to.
+
+## 2. Frontend (**)
+
+> ** It is not necessary if you have executed the command `php artisan hexagonal:start` without the parameter `--simple`
 
 ### Install a second package to easily build views [`@kalel1500/laravel-ts-utils`]
 
