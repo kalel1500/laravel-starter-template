@@ -14,14 +14,19 @@ This is a Laravel 11 starter template to quickly start applications with Hexagon
 
 To start the Laravel application (`in Laravel 11`) simply follow the following steps:
 
-1. Copy the `.env.example` file to a new `.env` file
-2. Rn the following commands:
+1. Remove the following lines from the ".gitignore" file:
+   ```gitignore
+   composer.lock
+   package-lock.json
+   ```
+2. Copy the `.env.example` file to a new `.env` file
+3. Rn the following commands:
    ```bash
    composer install
    npm install
    npm run build
    ```
-3. Rn the following commands:
+4. Rn the following commands:
    ```bash
     php artisan key:generate
     php artisan migrate:fresh
