@@ -1,6 +1,6 @@
 # Laravel Starter Template
 
-This is a Laravel 11 starter template to quickly start applications with Hexagonal Architecture and DDD
+This is a Laravel 12 starter template to quickly start applications with Hexagonal Architecture and DDD
 
 - [**Start the Laravel app**](#start-the-Laravel-app)
 - [**Preparing the Template**](#preparing-the-template)
@@ -12,7 +12,7 @@ This is a Laravel 11 starter template to quickly start applications with Hexagon
 
 # Start the Laravel app
 
-To start the Laravel application (`in Laravel 11`) simply follow the following steps:
+To start the Laravel application (`in Laravel 12`) simply follow the following steps:
 
 1. Remove the following lines from the ".gitignore" file:
    ```gitignore
