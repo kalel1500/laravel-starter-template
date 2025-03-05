@@ -47,7 +47,7 @@ composer require kalel1500/laravel-hexagonal-and-ddd-architecture-utilities:@bet
 To create the initial package files you can run the following command:
 
 ```bash
-php artisan hexagonal:start
+php artisan kalion:start
 ```
 
 > This command can receive two parameters:\
@@ -63,7 +63,7 @@ php artisan hexagonal:start
 
 ## 2. Frontend (**) [`laravel-ts-utils`]
 
-> ** It is not necessary if you have executed the command `php artisan hexagonal:start` without the parameter `--simple`
+> ** It is not necessary if you have executed the command `php artisan kalion:start` without the parameter `--simple`
 
 ### Install a second package to easily build views
 
@@ -95,7 +95,7 @@ Here is a list of packages that are interesting to use in this template
 
 | Type            | Name                                   | Command                                                                                            |
 |-----------------|----------------------------------------|----------------------------------------------------------------------------------------------------|
-| *composer*:     | hexagonal                              | `composer require kalel1500/laravel-hexagonal-and-ddd-architecture-utilities:@beta`                |
+| *composer*:     | kalion                                 | `composer require kalel1500/laravel-hexagonal-and-ddd-architecture-utilities:@beta`                |
 | *npm*:          | @kalel1500/laravel-ts-utils            | `npm install @kalel1500/laravel-ts-utils` && `npx @kalel1500/laravel-ts-utils`                     |
 | --              | --                                     | --                                                                                                 |
 | ~~*composer*:~~ | ~~ziggy~~ `[already installed]`        | ~~`composer require tightenco/ziggy`~~                                                             |
