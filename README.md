@@ -3,9 +3,9 @@
 This is a Laravel 12 starter template to quickly start applications with Hexagonal Architecture and DDD
 
 - [**Start the Laravel app**](#start-the-Laravel-app)
-- [**Preparing the Template**](#preparing-the-template)
-    - [Install `laravel-hexagonal-and-ddd-architecture-utilities` package](#install-the-main-package-for-hexagonal-architecture-kalel1500laravel-hexagonal-and-ddd-architecture-utilities)
-    - [Install `@kalel1500/laravel-ts-utils` package](#install-the-second-package-for-build-a-simple-front-kalel1500laravel-ts-utils)
+- [**Installs two useful packages**](#installs-two-useful-packages)
+    - [Backend `kalion` package](#1-backend-kalion)
+    - [Frontend `@kalel1500/kalion-js` package](#2-frontend--kalion-js)
 - [**More info from Template packages that may be useful**](#more-info-from-template-packages-that-may-be-useful)
 - [**Laravel Artisan packages explained**](#laravel-artisan-packages-explained)
 - [**License**](#license)
@@ -34,14 +34,14 @@ To start the Laravel application (`in Laravel 12`) simply follow the following s
 
 # Installs two useful packages
 
-## 1. Backend [`laravel-hexagonal-and-ddd-architecture-utilities`]
+## 1. Backend (`kalion`)
 
 ### Install the main package for hexagonal architecture 
 
 This is the main package that allows us to easily program with hexagonal architecture and DDD and makes it easy to create the initial files.
 
 ```bash
-composer require kalel1500/laravel-hexagonal-and-ddd-architecture-utilities:@beta
+composer require kalel1500/kalion:@beta
 ```
 
 To create the initial package files you can run the following command:
@@ -55,15 +55,15 @@ php artisan kalion:start
 > `--simple` (false) \
 > By default the `simple` parameter is `false` and the following commands are automatically launched:
 > ```bash
-> npm install @kalel1500/laravel-ts-utils
-> npx @kalel1500/laravel-ts-utils
+> npm install @kalel1500/kalion-js
+> npx @kalel1500/kalion-js
 > ```
 > Therefore, it is not necessary to install the second package. \
 > Otherwise, if you want to use Laravel's blade views, you will need to.
 
-## 2. Frontend (**) [`laravel-ts-utils`]
+## 2. Frontend (`kalion-js`)*
 
-> ** It is not necessary if you have executed the command `php artisan kalion:start` without the parameter `--simple`
+> \* It is not necessary if you have executed the command `php artisan kalion:start` without the parameter `--simple`
 
 ### Install a second package to easily build views
 
@@ -71,7 +71,7 @@ If your application will have blade views using vanilla Javascript, the followin
 
 To install the package you can use the following command:
 ```bash
-npm install @kalel1500/laravel-ts-utils
+npm install @kalel1500/kalion-js
 ```
 
 By default, the initial front-end (TypeScript and Css) files are not created.
@@ -79,7 +79,7 @@ By default, the initial front-end (TypeScript and Css) files are not created.
 The package provides a command to create the necessary files
 
 ```bash
-npx @kalel1500/laravel-ts-utils
+npx @kalel1500/kalion-js
 ```
 
 After installing the package and bringing all the files, we have to compile again and then clear the views cache (in case the page has been entered before and has been cached without the icon)
@@ -93,16 +93,12 @@ php artisan view:clear
 
 Here is a list of packages that are interesting to use in this template
 
-| Type            | Name                                   | Command                                                                                            |
-|-----------------|----------------------------------------|----------------------------------------------------------------------------------------------------|
-| *composer*:     | kalion                                 | `composer require kalel1500/laravel-hexagonal-and-ddd-architecture-utilities:@beta`                |
-| *npm*:          | @kalel1500/laravel-ts-utils            | `npm install @kalel1500/laravel-ts-utils` && `npx @kalel1500/laravel-ts-utils`                     |
-| --              | --                                     | --                                                                                                 |
-| ~~*composer*:~~ | ~~ziggy~~ `[already installed]`        | ~~`composer require tightenco/ziggy`~~                                                             |
-| ~~*npm*:~~      | ~~tailwind css~~ `[already installed]` | ~~`npm install -D tailwindcss postcss autoprefixer` && `npx tailwindcss init -p (don't execute)`~~ |
-| --              | --                                     | --                                                                                                 |
-| *artisan*:      | api                                    | `php artisan install:api`                                                                          |
-| *artisan*:      | broadcasting                           | `php artisan install:broadcasting`                                                                 |
+| Type            | Name                                   | Command                                                           |
+|-----------------|----------------------------------------|-------------------------------------------------------------------|
+| *composer*:     | kalion                                 | `composer require kalel1500/kalion:@beta`                         |
+| *npm*:          | @kalel1500/kalion-js                   | `npm install @kalel1500/kalion-js` && `npx @kalel1500/kalion-js`  |
+| *artisan*:      | api                                    | `php artisan install:api`                                         |
+| *artisan*:      | broadcasting                           | `php artisan install:broadcasting`                                |
 
 
 # Laravel Artisan packages explained
